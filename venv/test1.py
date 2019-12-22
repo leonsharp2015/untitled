@@ -29,12 +29,12 @@ list4=[1,5]
 t1=tile(list4,(4,1))
 
 x1=[1,2]
-x=[[0,9],[1,3],[7,7],[9,12]]
-x_m=mat(x)
-x1_m=tile(x1,(4,1))
-diff_m=(x1_m-x_m)
-print(diff_m**2)
-
+x=array([[0,9],[1,3],[7,7],[9,12]])
+diff=(tile(x1,(4,1))-x)**2
+distance=diff.sum(axis=1)
+distance=distance**0.5
+sortX_index=distance.argsort()
+print(sortX_index)
 
 
 

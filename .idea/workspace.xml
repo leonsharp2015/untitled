@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="" />
+    <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/kNN01.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/kNN01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/test1.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1V1W1ZAeGmdd1ZfkWwJqxTd6X02" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +31,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -31,7 +41,7 @@
       <recent name="$PROJECT_DIR$/venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.kNN1">
+  <component name="RunManager" selected="Python.test1">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,8 +131,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.kNN1" />
         <item itemvalue="Python.test1" />
+        <item itemvalue="Python.kNN1" />
         <item itemvalue="Python.common_fun" />
       </list>
     </recent_temporary>
@@ -153,7 +163,7 @@
       <workItem from="1576421092568" duration="96000" />
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
-      <workItem from="1576850416767" duration="12960000" />
+      <workItem from="1576850416767" duration="14289000" />
     </task>
     <servers />
   </component>
@@ -169,26 +179,30 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="347" y="23" key="#test1/0.23.1280.709@0.23.1280.709" timestamp="1576421241617" />
+    <state x="100" y="123" width="1080" height="509" key="DiffContextDialog" timestamp="1577027885176">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="100" y="123" width="1080" height="509" key="DiffContextDialog/0.23.1280.709@0.23.1280.709" timestamp="1577027885176" />
     <state x="464" y="125" key="FileChooserDialogImpl" timestamp="1576772905175">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1576772905175" />
-    <state width="1238" height="175" key="GridCell.Tab.0.bottom" timestamp="1577027447554">
+    <state width="1238" height="175" key="GridCell.Tab.0.bottom" timestamp="1577028784941">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577027447554" />
-    <state width="1238" height="175" key="GridCell.Tab.0.center" timestamp="1577027447552">
+    <state width="1238" height="175" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577028784941" />
+    <state width="1238" height="175" key="GridCell.Tab.0.center" timestamp="1577028784940">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577027447552" />
-    <state width="1238" height="175" key="GridCell.Tab.0.left" timestamp="1577027447551">
+    <state width="1238" height="175" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577028784940" />
+    <state width="1238" height="175" key="GridCell.Tab.0.left" timestamp="1577028784939">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577027447551" />
-    <state width="1238" height="175" key="GridCell.Tab.0.right" timestamp="1577027447553">
+    <state width="1238" height="175" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577028784939" />
+    <state width="1238" height="175" key="GridCell.Tab.0.right" timestamp="1577028784940">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577027447553" />
+    <state width="1238" height="175" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577028784940" />
     <state x="149" y="23" width="982" height="709" key="SettingsEditor" timestamp="1576772918156">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -199,7 +213,7 @@
     <state x="296" y="212" key="com.intellij.ide.util.TipDialog/0.23.1280.709@0.23.1280.709" timestamp="1576421076996" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1577027350598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577027447541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1577028784928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577027870873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
   </component>
 </project>

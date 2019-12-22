@@ -8,7 +8,7 @@ def createDataSet():
 def classify01(inX,dataSet,labels,k):
     dataSetSize=dataSet.shape[0]
     diffMat=tile(inX,(dataSetSize,1))-dataSet
-    sqDiffMat=diffMat**2
+    sqDiffMat=diffMat**2 #ndarray
     sqDistances=sqDiffMat.sum(axis=1)
     distances=sqDistances**0.5
     sortedDistance=distances.argsort() #distances的值排序后，输出排序值的索引

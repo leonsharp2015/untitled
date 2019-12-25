@@ -56,17 +56,26 @@ dataMatrix,datalabels=file_ndArray()
 # ax.scatter(dataMatrix[:,1],dataMatrix[:,2],15.0*array(datalabels),15.0*array(datalabels))
 # ax.axis([-2,25,-0.2,2.0])
 # plt.show()
+
 ndarray=array([[1,2,3],[4,5,6],[7,8,9],[10,11,12]])
 data=zeros(shape(ndarray))
-#data=ndarray-tile()
 minValues=ndarray.min(0)
 maxValues=ndarray.max(0)
 ranges=maxValues-minValues
 normalSet=ndarray-tile(minValues,(4,1))
 normalSet=normalSet/tile(ranges,(4,1))
-print(ranges)
+# print(ndarray[1,:])
 
+x1=array([[1,2,3],[4,5,6]])
+x2=zeros((2,3))
+print(x2[1,:])#第2行所有值
 
+ndarray=array([[1,7,32],[4,5,6],[8,2,0]])
+minvalues=ndarray.min(0)
+aa=ndarray-tile(minvalues,(3,1))
+range=ndarray.max(0)-ndarray.min(0)
+bb=aa/tile(range,(3,1))
+print(bb)
 
 
 

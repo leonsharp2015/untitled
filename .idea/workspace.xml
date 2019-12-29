@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/tree/shanonEnd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/tree/trees.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/kNN03.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/kNN03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/kNN.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/tree" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.buildout.BuildoutModulesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -44,10 +46,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/tree" />
       <recent name="$PROJECT_DIR$/venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.kNN03">
+  <component name="RunManager" selected="Python.shanonEnd">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,7 +58,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -63,26 +66,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="common_fun" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/common_fun.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -146,6 +130,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="shanonEnd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/tree" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/tree/shanonEnd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,19 +172,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.common_fun" />
       <item itemvalue="Python.kNN1" />
       <item itemvalue="Python.test1" />
       <item itemvalue="Python.kNN02" />
       <item itemvalue="Python.kNN03" />
+      <item itemvalue="Python.shanonEnd" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.shanonEnd" />
         <item itemvalue="Python.kNN03" />
         <item itemvalue="Python.kNN02" />
         <item itemvalue="Python.kNN1" />
         <item itemvalue="Python.test1" />
-        <item itemvalue="Python.common_fun" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +214,7 @@
       <workItem from="1576421092568" duration="96000" />
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
-      <workItem from="1576850416767" duration="62855000" />
+      <workItem from="1576850416767" duration="72444000" />
     </task>
     <servers />
   </component>
@@ -230,10 +233,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577288526582">
+    <state x="104" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577541995059">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="104" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.709@0.23.1280.709" timestamp="1577288526582" />
+    <state x="104" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.709@0.23.1280.709" timestamp="1577541995059" />
     <state x="347" y="23" key="#test1" timestamp="1576421241617">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -246,22 +249,22 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1576772905175" />
-    <state width="1238" height="175" key="GridCell.Tab.0.bottom" timestamp="1577533687120">
+    <state width="1238" height="175" key="GridCell.Tab.0.bottom" timestamp="1577586346431">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577533687120" />
-    <state width="1238" height="175" key="GridCell.Tab.0.center" timestamp="1577533687119">
+    <state width="1238" height="175" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577586346431" />
+    <state width="1238" height="175" key="GridCell.Tab.0.center" timestamp="1577586346430">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577533687119" />
-    <state width="1238" height="175" key="GridCell.Tab.0.left" timestamp="1577533687118">
+    <state width="1238" height="175" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577586346430" />
+    <state width="1238" height="175" key="GridCell.Tab.0.left" timestamp="1577586346430">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577533687118" />
-    <state width="1238" height="175" key="GridCell.Tab.0.right" timestamp="1577533687119">
+    <state width="1238" height="175" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577586346430" />
+    <state width="1238" height="175" key="GridCell.Tab.0.right" timestamp="1577586346430">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577533687119" />
+    <state width="1238" height="175" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577586346430" />
     <state width="1238" height="218" key="GridCell.Tab.1.bottom" timestamp="1577103825303">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -290,7 +293,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1577028784928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577194944558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$kNN03.coverage" NAME="kNN03 Coverage Results" MODIFIED="1577533687112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/untitled$kNN03.coverage" NAME="kNN03 Coverage Results" MODIFIED="1577543410505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$kNN02.coverage" NAME="kNN02 Coverage Results" MODIFIED="1577285845046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/untitled$shanonEnd.coverage" NAME="shanonEnd Coverage Results" MODIFIED="1577586346421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
   </component>
 </project>

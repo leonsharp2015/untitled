@@ -2,15 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/tree/shanonEnd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/tree/trees.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/kNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/tree/shanonEnd.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/tree/shanonEnd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -214,7 +226,7 @@
       <workItem from="1576421092568" duration="96000" />
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
-      <workItem from="1576850416767" duration="72444000" />
+      <workItem from="1576850416767" duration="83636000" />
     </task>
     <servers />
   </component>
@@ -249,38 +261,38 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1576772905175" />
-    <state width="1238" height="175" key="GridCell.Tab.0.bottom" timestamp="1577586346431">
+    <state width="1238" height="175" key="GridCell.Tab.0.bottom" timestamp="1577721052979">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577586346431" />
-    <state width="1238" height="175" key="GridCell.Tab.0.center" timestamp="1577586346430">
+    <state width="1238" height="175" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577721052979" />
+    <state width="1238" height="175" key="GridCell.Tab.0.center" timestamp="1577721052978">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577586346430" />
-    <state width="1238" height="175" key="GridCell.Tab.0.left" timestamp="1577586346430">
+    <state width="1238" height="175" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1577721052978" />
+    <state width="1238" height="175" key="GridCell.Tab.0.left" timestamp="1577721052978">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577586346430" />
-    <state width="1238" height="175" key="GridCell.Tab.0.right" timestamp="1577586346430">
+    <state width="1238" height="175" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1577721052978" />
+    <state width="1238" height="175" key="GridCell.Tab.0.right" timestamp="1577721052979">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="175" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577586346430" />
-    <state width="1238" height="218" key="GridCell.Tab.1.bottom" timestamp="1577103825303">
+    <state width="1238" height="175" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1577721052979" />
+    <state width="1238" height="218" key="GridCell.Tab.1.bottom" timestamp="1577591857430">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577103825303" />
-    <state width="1238" height="218" key="GridCell.Tab.1.center" timestamp="1577103825302">
+    <state width="1238" height="218" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1577591857430" />
+    <state width="1238" height="218" key="GridCell.Tab.1.center" timestamp="1577591857429">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1577103825302" />
-    <state width="1238" height="218" key="GridCell.Tab.1.left" timestamp="1577103825302">
+    <state width="1238" height="218" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1577591857429" />
+    <state width="1238" height="218" key="GridCell.Tab.1.left" timestamp="1577591857429">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1577103825302" />
-    <state width="1238" height="218" key="GridCell.Tab.1.right" timestamp="1577103825303">
+    <state width="1238" height="218" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1577591857429" />
+    <state width="1238" height="218" key="GridCell.Tab.1.right" timestamp="1577591857430">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1577103825303" />
+    <state width="1238" height="218" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1577591857430" />
     <state x="149" y="23" width="982" height="709" key="SettingsEditor" timestamp="1577288577231">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -295,6 +307,6 @@
     <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577194944558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$kNN03.coverage" NAME="kNN03 Coverage Results" MODIFIED="1577543410505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$kNN02.coverage" NAME="kNN02 Coverage Results" MODIFIED="1577285845046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$shanonEnd.coverage" NAME="shanonEnd Coverage Results" MODIFIED="1577586346421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
+    <SUITE FILE_PATH="coverage/untitled$shanonEnd.coverage" NAME="shanonEnd Coverage Results" MODIFIED="1577721052969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
   </component>
 </project>

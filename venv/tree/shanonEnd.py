@@ -1,5 +1,6 @@
 from numpy import *
 from math import log
+import operator
 def test():
     ds=array([[1,1,'yes'],[1,1,'yes'],[1,0,'no'],[0,1,'no'],[0,1,'no']])
     lbl=['no surfacing','flippers']
@@ -72,7 +73,7 @@ def calcShannonEnt(dataSet):
         shannonEnt -= prob * log(prob,2) #log base 2
     return shannonEnt
 
-def chooseBestFeatherToSplit(dataSet):#最大的不确定,该列包含最大的墒
+def chooseBestFeatherToSplit_1(dataSet):#最大的不确定,该列包含最大的墒
     numFeathers=len(dataSet[0])-1
     baseEntropy=calcShannonEnt(dataSet)
     bestInGain=0.0
@@ -80,11 +81,12 @@ def chooseBestFeatherToSplit(dataSet):#最大的不确定,该列包含最大的�
     for i in range(numFeathers):
         featList=[row[i] for row in dataSet]#每一行的对应第i列值
         uniqueValues=set(featList)
-        newEntropy=0.0
+        newEntropy=0.0#每列的墒
         for value in uniqueValues:
             subDataSet=splitDataSet(dataSet,i,value)
             prob=len(subDataSet)/float(len(dataSet))
             newEntropy+=prob*calcShannonEnt(subDataSet)
+            print(subDataSet,newEntropy)
         infoGain=baseEntropy-newEntropy
         if(infoGain>bestInGain):
             bestInGain=infoGain
@@ -96,7 +98,7 @@ dataSet = [[1, 1, 'yes'],
            [1, 0, 'no'],
            [0, 1, 'no'],
            [0, 1, 'no']]
-# aa=chooseBestFeatherToSplit(dataSet)
+# aa=chooseBestFeatherToSplit_1(dataSet)
 # d1=[[1,2,3,4],[5,6,7,8]]
 # for i in range(len(dataSet[0])-1):
 #     featList = [example[i] for example in dataSet]
@@ -131,20 +133,136 @@ def test_calaShannonEnd(dataSet):
     return shannon
 
 def test_chooseBestLabel(dataSet):
-    gain=0
-    index=-1
-    for vector in dataSet:
-        for labelAxis in range(len(vector)):
-            value=vector[labelAxis]
-            split_ds=test_splitDataSet(dataSet,labelAxis,value)
-            g1=test_calaShannonEnd(split_ds)
-            print(g1)
-            if gain>g1:
-                gain=g1
-                index=labelAxis
+    numFeathers = len(dataSet[0]) - 1
+    baseEntropy=test_calaShannonEnd(dataSet)
+    bestInfoGain = 0.0
+    bestFeature=-1
+    for i in range(numFeathers):
+        featherList=[v[i] for v in dataSet ]
+        unique_values=set(featherList)
+        one_feather_gain=0#一列的墒
+        for value in unique_values:
+            split_ds=test_splitDataSet(dataSet,i,value)
+            one_value_gain=test_calaShannonEnd(split_ds)#某一个值的墒
+            prop=len(split_ds)/float(len(dataSet))
+            one_feather_gain+=prop*one_value_gain
+            # print(split_ds,one_feather_gain)
+        infoGain = baseEntropy - one_feather_gain
+        if (infoGain > bestInfoGain):  # compare this to the best gain so far
+            bestInfoGain = infoGain  # if better than current best, set to best
+            bestFeature = i
+    # print('bestFeature',bestFeature)
+    return bestFeature
+
+# test_chooseBestLabel(dataSet)
+# [[1, 'no'], [1, 'no']] 0.0
+# [[1, 'yes'], [1, 'yes'], [0, 'no']] 0.5509775004326937
+# 0 0.5509775004326937
+# [[1, 'no']] 0.0
+# [[1, 'yes'], [1, 'yes'], [0, 'no'], [0, 'no']] 0.8
+# 1 0.8
+
+def chooseBestFeatureToSplit(dataSet):
+    numFeatures = len(dataSet[0]) - 1  # the last column is used for the labels
+    baseEntropy = calcShannonEnt(dataSet)
+    bestInfoGain = 0.0;
+    bestFeature = -1
+    for i in range(numFeatures):  # iterate over all the features
+        featList = [example[i] for example in dataSet]  # create a list of all the examples of this feature
+        uniqueVals = set(featList)  # get a set of unique values
+        newEntropy = 0.0
+        for value in uniqueVals:
+            subDataSet = splitDataSet(dataSet, i, value)
+            prob = len(subDataSet) / float(len(dataSet))
+            newEntropy += prob * calcShannonEnt(subDataSet)
+            # print(subDataSet,newEntropy)
+        infoGain = baseEntropy - newEntropy  # calculate the info gain; ie reduction in entropy
+        if (infoGain > bestInfoGain):  # compare this to the best gain so far
+            bestInfoGain = infoGain  # if better than current best, set to best
+            bestFeature = i
+    # print('bestFeature',bestFeature)
+    return bestFeature  # returns an integer
+
+def test_majorityClass(classList):
+    dic={}
+    for c in classList:
+        if c not in dic.keys():dic[c]=0
+        dic[c]+=1
+    s=sorted(dic.items(),key=operator.itemgetter(1),reverse=True)
+    print('test_majorityClass:',s[0][0])
+    return s[0][0]
+
+def splitDataSet_0(dataSet, axis, value):
+    retDataSet = []
+    for featVec in dataSet:
+        if featVec[axis] == value:
+            reducedFeatVec = featVec[:axis]  # chop out axis used for splitting
+            reducedFeatVec.extend(featVec[axis + 1:])
+            retDataSet.append(reducedFeatVec)
+    return retDataSet
+
+def majorityCnt_0(classList):
+    classCount = {}
+    for vote in classList:
+        if vote not in classCount.keys(): classCount[vote] = 0
+        classCount[vote] += 1
+    sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
+    return sortedClassCount[0][0]
+
+def test_createTree(dadaSet,labels):
+    # classList=[v[-1] for v in labels]
+    # if classList.count(classList[0])==len(classList):
+    #     return classList[0]
+    # if len(dataSet[0])==1:
+    #     return test_majorityClass(classList)
+    # bestFeat=test_chooseBestLabel(dataSet)
+    # bestFeatlabel=labels[bestFeat]
+    # myTree={bestFeatlabel:{}}
+    # del(labels[bestFeat])
+    # featureValue=[example[bestFeat] for example in dataSet]
+    # unqueValue=set(featureValue)
+    # for value in unqueValue:
+    #     subLabels=labels[:]
+    #     print(subLabels)
+    #     myTree[bestFeatlabel][value]=test_createTree(splitDataSet(dataSet,bestFeat,value),subLabels)
+    # return myTree
+
+    classList = [example[-1] for example in dataSet]
+    if classList.count(classList[0]) == len(classList):
+        return classList[0]  # stop splitting when all of the classes are equal
+    if len(dataSet[0]) == 1:  # stop splitting when there are no more features in dataSet
+        return majorityCnt_0(classList)
+
+    bestFeat = chooseBestFeatureToSplit(dataSet)
+    bestFeatLabel = labels[bestFeat]
+    myTree = {bestFeatLabel: {}}
+    del (labels[bestFeat])
+    featValues = [example[bestFeat] for example in dataSet]
+    uniqueVals = set(featValues)
+    for value in uniqueVals:
+        subLabels = labels[:]  # copy all of labels, so trees don't mess up existing labels
+        myTree[bestFeatLabel][value] = test_createTree(splitDataSet_0(dataSet, bestFeat, value), subLabels)
+    return myTree
+
+def createDataSet():
+    dataSet = [[1, 1, 'yes'],
+               [1, 1, 'yes'],
+               [1, 0, 'no'],
+               [0, 1, 'no'],
+               [0, 1, 'no']]
+    labels = ['no surfacing', 'flippers']
+    # change to discrete values
+    return dataSet, labels
+
+ds,labels=createDataSet()
+myTree=test_createTree(ds,labels)
 
 
-(dataSet)
+
+
+
+
+
 
 
 

@@ -66,7 +66,7 @@ def bayes_main():
     listOPosts,listClasses=loadData()
     myVocaList=createVocaList(listOPosts)#去除重复元素的所有元素集合:词汇表
     trainMatrix=[]
-    for positionDoc in listOPosts:#1个文档
+    for positionDoc in listOPosts:#每个文档
         xx=setOfWords2Vec(myVocaList,positionDoc)
         trainMatrix.append(xx) #trainMatrix:每个doc在词汇表的存在项[0,1,0,0,......0,1]
 
@@ -95,11 +95,13 @@ def spamText():
     classList=[]
     fullText=[]
     for i in range(1,26):#1-25
+        #垃圾邮件
         wordList=textParse(open('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch04/email/spam/%d.txt' % i).read())
         docList.append(wordList)
         fullText.extend(wordList)
         classList.append(1)
 
+        #正常邮件
         wordList=textParse(open('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch04/email/ham/%d.txt' % i).read())
         docList.append(wordList)
         fullText.extend(wordList)

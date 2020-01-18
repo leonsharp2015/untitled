@@ -88,7 +88,7 @@ def test_logistic():
 
 
 def classifyVector(inX,weight):
-    prob=sigmoid(sum(inX*weight))
+    prob=sigmoid(sum(inX*weight)) #sigmod(w0+w1*x1+w2*x2+.....)
     if prob>0.5:return 1.0
     else:return 0.0
 
@@ -103,8 +103,8 @@ def colicTest():
         for i in range(21):
             lineArr.append(float(currLine[i]))
         trainingSet.append(lineArr)
-        trainingLabels.append(float(currLine[2]))
-    traingWeights=stocGradAscent1(array(trainingSet),trainingLabels,500)
+        trainingLabels.append(float(currLine[21]))
+    traingWeights=stocGradAscent1(array(trainingSet),trainingLabels,1000)
 
     for line in frTest.readlines():
         currLine=line.strip().split('\t')

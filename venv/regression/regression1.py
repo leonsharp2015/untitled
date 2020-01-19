@@ -92,26 +92,26 @@ def stageWise(xArr,yArr,eps=0.01,numIt=100):#前向逐步回归
 
     xMat = regularize(xMat)
     m,n=shape(xMat) #4177*8
-    #returnMat = zeros((numIt,n)) #testing code remove
+    returnMat = zeros((numIt,n)) #testing code remove
     ws = zeros((n,1))
     wsTest = ws.copy()
     wsMax = ws.copy()
 
-    for i in range(1):#测试100次
+    for i in range(numIt):#测试100次
         #print(ws.T)
         lowestError = inf;#无限大的正数
         for j in range(n):#0-7
-            for sign in [-1,1]:#每次走2步
-                wsTest = ws.copy()
-                wsTest[j] += eps*sign
+            for sign in [-1,1]:#每次走2步,步长是eps
+                wsTest = ws.copy() #8*1
+                wsTest[j] += eps*sign #wsTest[j]表示该特征j对误差的影响.wsTest=[0,0.01,.....,0]T
                 yTest = xMat*wsTest
-                rssE = rssError(yMat.A,yTest.A)
+                rssE = rssError(yMat.A,yTest.A) #A代表将矩阵转化为array数组类
                 if rssE < lowestError:
                     lowestError = rssE
                     wsMax = wsTest
         ws = wsMax.copy()
-        #returnMat[i,:]=ws.T
-    #return returnMat
+        returnMat[i,:]=ws.T
+    return returnMat
 
 # xArr,yArr=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch08/ex0.txt')
 # test_y,weights=lwlr(xArr[0],xArr,yArr,0.001)
@@ -122,7 +122,9 @@ xArr,yArr=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战�
 # ax=fig.add_subplot(111)
 # ax.plot(ridgeweight)
 # plt.show()
-stageWise(xArr,yArr)
+ws=stageWise(xArr,yArr,0.01,200)
+print(ws)
+
 
 
 

@@ -145,7 +145,8 @@ def stageWise(xArr,yArr,eps=0.01,numIt=100):
     
 from time import sleep
 import json
-import urllib2
+import urllib.request as urllib2
+import urllib
 def searchForSet(retX, retY, setNum, yr, numPce, origPrc):
     sleep(10)
     myAPIstr = 'AIzaSyD2cR2KFyx12hXu6PFU-wrWot3NXvko8vY'

@@ -1,69 +1,148 @@
 from numpy import *
-
-def loadDataSet(fileName):      #general function to parse tab -delimited floats
-    dataMat = []                #assume last column is target value
+#载入数据
+def loadDataSet(fileName):
+    dataMat = []
     fr = open(fileName)
     for line in fr.readlines():
         curLine = line.strip().split('\t')
-        fltLine = list(map(float,curLine)) #map all elements to float()
+        # python3不适用：fltLine = map(float,curLine) 修改为：
+        fltLine = list(map(float, curLine))#将每行映射成浮点数，python3返回值改变，所以需要
         dataMat.append(fltLine)
     return dataMat
 
-def binSplitDataSet(dataSet,feather,value):
-    mat0 = dataSet[nonzero(dataSet[:, feather] > value)[0], :]
-    mat1 = dataSet[nonzero(dataSet[:, feather] <= value)[0], :]
-    return mat0,mat1
+#切分数据集为两个子集
+def binSplitDataSet(dataSet, feature, value): #数据集 待切分特征 特征值
+    mat0 = dataSet[nonzero(dataSet[:, feature] > value)[0], :]
+    mat1 = dataSet[nonzero(dataSet[:, feature] <= value)[0], :]
+    #下面原书代码报错 index 0 is out of bounds,使用上面两行代码
+    #mat0 = dataSet[nonzero(dataSet[:, feature] > value)[0], :][0]
+    #mat1 = dataSet[nonzero(dataSet[:, feature] <= value)[0], :][0]
+    return mat0, mat1
 
-def regLeaf(dataSet):#returns the value used for each leaf
+
+#Tree结点类型：回归树
+def regLeaf(dataSet):#生成叶结点，在回归树中是目标变量特征的均值
     return mean(dataSet[:,-1])
-
-def regErr(dataSet):
+#误差计算函数：回归误差
+def regErr(dataSet):#计算目标的平方误差（均方误差*总样本数）
     return var(dataSet[:,-1]) * shape(dataSet)[0]
 
+
+#二元切分
 def chooseBestSplit(dataSet, leafType=regLeaf, errType=regErr, ops=(1,4)):
-    tolS = ops[0]; tolN = ops[1]
-    #if all the target variables are the same value: quit and return value
-    if len(set(dataSet[:,-1].T.tolist()[0])) == 1: #exit cond 1
-        return None, leafType(dataSet)
+    #切分特征的参数阈值，用户初始设置好
+    tolS = ops[0] #允许的误差下降值
+    tolN = ops[1] #切分的最小样本数
+    #若所有特征值都相同，停止切分
+    if len(set(dataSet[:,-1].T.tolist()[0])) == 1:#倒数第一列转化成list 不重复
+        return None,leafType(dataSet)  #如果剩余特征数为1，停止切分1。
+        # 找不到好的切分特征，调用leafType=regLeaf直接生成叶结点
+
     m,n = shape(dataSet)
-    #the choice of the best feature is driven by Reduction in RSS error from mean
-    S = errType(dataSet)
+    S = errType(dataSet)#最好的特征通过计算平均误差 errType=regErr
     bestS = inf; bestIndex = 0; bestValue = 0
-    for featIndex in range(n-1):
-        #for splitVal in set(dataSet[:,featIndex]):
-        for splitVal in set((dataSet[:, featIndex].T.A.tolist())[0]):
-            mat0, mat1 = binSplitDataSet(dataSet, featIndex, splitVal)
+    for featIndex in range(n-1): #遍历数据的每个属性特征
+        # for splitVal in set(dataSet[:,featIndex]): python3报错修改为下面
+        for splitVal in set((dataSet[:, featIndex].T.A.tolist())[0]):#遍历每个特征里不同的特征值
+            mat0, mat1 = binSplitDataSet(dataSet, featIndex, splitVal)#对每个特征进行二元分类
             if (shape(mat0)[0] < tolN) or (shape(mat1)[0] < tolN): continue
-            newS = errType(mat0) + errType(mat1)
-            if newS < bestS:
+            newS = errType(mat0) + errType(mat1) #errType=regErr
+            if newS < bestS:#更新为误差最小的特征
                 bestIndex = featIndex
                 bestValue = splitVal
                 bestS = newS
-    #if the decrease (S-bestS) is less than a threshold don't do the split
+    #如果切分后误差效果下降不大，则取消切分，直接创建叶结点
     if (S - bestS) < tolS:
-        return None, leafType(dataSet) #exit cond 2
+        return None,leafType(dataSet) #停止切分2
     mat0, mat1 = binSplitDataSet(dataSet, bestIndex, bestValue)
-    if (shape(mat0)[0] < tolN) or (shape(mat1)[0] < tolN):  #exit cond 3
+    #判断切分后子集大小，小于最小允许样本数停止切分3
+    if (shape(mat0)[0] < tolN) or (shape(mat1)[0] < tolN):
         return None, leafType(dataSet)
-    return bestIndex,bestValue#returns the best feature to split on
-                              #and the value used for that split
+    return bestIndex,bestValue#返回特征编号和用于切分的特征值
 
 
-def creatTree(dataSet,leafType=regLeaf,errType=regErr,ops=(1,4)):
-    feat,val=chooseBestSplit(dataSet,leafType,errType,ops)
-    if feat==None:return val
-    retTree={}
-    retTree['spInd']=feat
-    retTree['spVal']=val
-    lSet,rSet=binSplitDataSet(dataSet,feat,val)
-    retTree['left']=creatTree(lSet,leafType,errType,ops)
-    retTree['right']=creatTree(rSet,leafType,errType,ops)
+#构建tree
+def creatTree(dataSet, leafType=regLeaf, errType=regErr, ops=(1,4)):
+    #数据集默认NumPy Mat 其他可选参数【结点类型：回归树，误差计算函数，ops包含树构建所需的其他元组】
+    feat,val = chooseBestSplit(dataSet, leafType, errType, ops)
+    if feat == None: return val #满足停止条件时返回叶结点值
+    #切分后赋值
+    retTree = {}
+    retTree['spInd'] = feat
+    retTree['spVal'] = val
+    #切分后的左右子树
+    lSet, rSet = binSplitDataSet(dataSet, feat, val)
+    retTree['left'] = creatTree(lSet, leafType, errType, ops)
+    retTree['right'] = creatTree(rSet, leafType, errType, ops)
     return retTree
 
-myData1=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch09/ex0.txt')
-myMat1=mat(myData1)
-tree=creatTree(myMat1)
+#－－－－－－－－－－－树的后剪枝
+#判断输入是否为一棵树
+def isTree(obj):
+    return (type(obj).__name__=='dict') #判断为字典类型返回true
+
+#返回树的平均值
+def getMean(tree):
+    if isTree(tree['right']):
+        tree['right'] = getMean(tree['right'])
+    if isTree(tree['left']):
+        tree['left'] = getMean(tree['left'])
+    return (tree['left']+tree['right'])/2.0
+
+def prune(tree, testData):#待剪枝的树和剪枝所需的测试数据
+    if shape(testData)[0] == 0: return getMean(tree)  # 确认数据集非空
+    #假设发生过拟合，采用测试数据对树进行剪枝
+    if (isTree(tree['right']) or isTree(tree['left'])): #左右子树非空
+        lSet, rSet = binSplitDataSet(testData, tree['spInd'], tree['spVal'])
+    if isTree(tree['left']):
+        tree['left'] = prune(tree['left'], lSet)
+    if isTree(tree['right']):
+        tree['right'] = prune(tree['right'], rSet)
+    #剪枝后判断是否还是有子树
+    if not isTree(tree['left']) and not isTree(tree['right']):
+        lSet, rSet = binSplitDataSet(testData, tree['spInd'], tree['spVal'])
+        #判断是否merge
+        errorNoMerge = sum(power(lSet[:, -1] - tree['left'], 2)) + \
+                       sum(power(rSet[:, -1] - tree['right'], 2))
+        treeMean = (tree['left'] + tree['right']) / 2.0
+        errorMerge = sum(power(testData[:, -1] - treeMean, 2)) #power(x1,2)对x1求2次方
+        #如果合并后误差变小
+        if errorMerge < errorNoMerge:
+            print("merging")
+            return treeMean
+        else:
+            return tree
+    else:
+        return tree
+
+
+# myData1=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch09/ex0.txt')
+# myMat1=mat(myData1)
+# tree=creatTree(myMat1)
+# print(tree)
+
+#剪枝
+myData2=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch09/ex2.txt')
+myMat2=mat(myData2)
+myTree=creatTree(myMat2,ops=(0,1))
+
+myDataTest=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch09/ex2test.txt')
+myMat2Test=mat(myDataTest)
+tree=prune(myTree,myMat2Test)
 print(tree)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

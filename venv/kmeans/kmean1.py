@@ -46,12 +46,14 @@ def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent):
                     minIndex = j # 与所有数据点距离最小距离的簇的索引（0-3）
             if clusterAssment[i,0] != minIndex:
                 clusterChanged = True
-            clusterAssment[i,:] = minIndex,minDist**2 #80*2.该数据点对应的最近簇索引、最近距离
+            clusterAssment[i,:] = minIndex,minDist**2 #80*2.该数据点（1-80行数据点）对应的最近簇索引[第一列]、最近距离［第二列］
 
         #更新质心（簇）的位置
         for cent in range(k):#0-3
-            ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]#get all the point in this cluster
-            centroids[cent,:] = mean(ptsInClust, axis=0) #移动centroid到均值位置
+            # nonzero(clusterAssment[:,0].A==cent)[0]：找到所有数据中对应clusterAssment中第cent列的行索引
+            # dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]就是所有数据的符合条件的具体点
+            ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]
+            centroids[cent,:] = mean(ptsInClust, axis=0) #赋值centroid到均值位置
     return centroids, clusterAssment
 
 
@@ -60,16 +62,17 @@ dataMat=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源
 centroids, clusterAssment=kMeans(dataMat,4) #4*2
 # print(centroids)
 
-array1=array([[1,2,9],[1,6,7],[2,5,6]])
-mat1=mat(array1)
-b1=nonzero(mat1[:,0]==1)
-
 # a=array([[1,0,0],[0,21,0],[3,7,9]])#[0,1,2,2,2],[0,1,0,1,2]:3,7,9都非0，所以第一个array补齐2
 # # a = array([[1, 0], [2, 0], [0, 9]])#不为0元素的行索引，放在第一个array[0,1,2]，列索引，放在第二个array[0,0,1]
 # b = nonzero(a)
 # print(b)
 
 
+array1=array([[1,2,9],[1,6,7],[2,5,6]])
+mat1=mat(array1)
+b1=nonzero(mat1[:,0]==1)#nonzero([[True],[True],[False]])=>存在的行索引array(0,1),存在的列索引array(0,0)
+row=b1[0]
+print(mat1[row])
 
 
 

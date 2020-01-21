@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/kmeans/kMeans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/kmeans/kmean1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/cart/cart1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/cart/cart1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/cart" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/kmeans" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.buildout.BuildoutModulesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -58,14 +59,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/kmeans" />
       <recent name="$PROJECT_DIR$/venv/cart" />
       <recent name="$PROJECT_DIR$/venv/regression" />
       <recent name="$PROJECT_DIR$/venv/boost" />
       <recent name="$PROJECT_DIR$/venv/bayes" />
-      <recent name="$PROJECT_DIR$/venv/tree" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cart1">
+  <component name="RunManager" selected="Python.kmean1">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,7 +133,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="logistic1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="kmean1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,12 +141,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/logistic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/kmeans" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/logistic/logistic1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/kmeans/kmean1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,19 +200,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.logistic1" />
       <item itemvalue="Python.svm1" />
       <item itemvalue="Python.boost1" />
       <item itemvalue="Python.regression1" />
       <item itemvalue="Python.cart1" />
+      <item itemvalue="Python.kmean1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kmean1" />
         <item itemvalue="Python.cart1" />
         <item itemvalue="Python.regression1" />
         <item itemvalue="Python.boost1" />
         <item itemvalue="Python.svm1" />
-        <item itemvalue="Python.logistic1" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +243,7 @@
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
       <workItem from="1576850416767" duration="138909000" />
-      <workItem from="1578738003317" duration="37064000" />
+      <workItem from="1578738003317" duration="49691000" />
     </task>
     <servers />
   </component>
@@ -283,38 +284,38 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1579501502175">
+    <state width="1238" height="317" key="GridCell.Tab.0.bottom" timestamp="1579570942912">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1579501502175" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1579501502174">
+    <state width="1238" height="317" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1579570942912" />
+    <state width="1238" height="317" key="GridCell.Tab.0.center" timestamp="1579570942911">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1579501502174" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1579501502173">
+    <state width="1238" height="317" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1579570942911" />
+    <state width="1238" height="317" key="GridCell.Tab.0.left" timestamp="1579570942910">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1579501502173" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1579501502174">
+    <state width="1238" height="317" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1579570942910" />
+    <state width="1238" height="317" key="GridCell.Tab.0.right" timestamp="1579570942911">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1579501502174" />
-    <state width="1238" height="198" key="GridCell.Tab.1.bottom" timestamp="1578153887776">
+    <state width="1238" height="317" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1579570942911" />
+    <state width="1238" height="198" key="GridCell.Tab.1.bottom" timestamp="1579526438190">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="198" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1578153887776" />
-    <state width="1238" height="198" key="GridCell.Tab.1.center" timestamp="1578153887776">
+    <state width="1238" height="198" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1579526438190" />
+    <state width="1238" height="198" key="GridCell.Tab.1.center" timestamp="1579526438190">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="198" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1578153887776" />
-    <state width="1238" height="198" key="GridCell.Tab.1.left" timestamp="1578153887775">
+    <state width="1238" height="198" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1579526438190" />
+    <state width="1238" height="198" key="GridCell.Tab.1.left" timestamp="1579526438189">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="198" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1578153887775" />
-    <state width="1238" height="198" key="GridCell.Tab.1.right" timestamp="1578153887776">
+    <state width="1238" height="198" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1579526438189" />
+    <state width="1238" height="198" key="GridCell.Tab.1.right" timestamp="1579526438190">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="198" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1578153887776" />
+    <state width="1238" height="198" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1579526438190" />
     <state x="434" y="95" key="RollbackChangesDialog" timestamp="1579402021632">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -339,15 +340,16 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/untitled$regression1.coverage" NAME="regression1 Coverage Results" MODIFIED="1579444496810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/regression" />
     <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1577028784928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577194944558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$logistic1.coverage" NAME="logistic1 Coverage Results" MODIFIED="1578738470661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/logistic" />
     <SUITE FILE_PATH="coverage/untitled$kNN03.coverage" NAME="kNN03 Coverage Results" MODIFIED="1577543410505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$bayes.coverage" NAME="bayes1 Coverage Results" MODIFIED="1578493564018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/bayes" />
     <SUITE FILE_PATH="coverage/untitled$kNN02.coverage" NAME="kNN02 Coverage Results" MODIFIED="1577285845046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$cart1.coverage" NAME="cart1 Coverage Results" MODIFIED="1579495434200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/cart" />
+    <SUITE FILE_PATH="coverage/untitled$cart1.coverage" NAME="cart1 Coverage Results" MODIFIED="1579504561116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/cart" />
     <SUITE FILE_PATH="coverage/untitled$tree2.coverage" NAME="tree2 Coverage Results" MODIFIED="1577974001009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
     <SUITE FILE_PATH="coverage/untitled$boost1.coverage" NAME="boost1 Coverage Results" MODIFIED="1579398254924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/boost" />
     <SUITE FILE_PATH="coverage/untitled$svm1.coverage" NAME="svm1 Coverage Results" MODIFIED="1578956369075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/svm" />
     <SUITE FILE_PATH="coverage/untitled$shanonEnd.coverage" NAME="shanonEnd Coverage Results" MODIFIED="1577979750533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
+    <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577194944558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/untitled$bayes.coverage" NAME="bayes1 Coverage Results" MODIFIED="1578493564018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/bayes" />
+    <SUITE FILE_PATH="coverage/untitled$kmean1.coverage" NAME="kmean1 Coverage Results" MODIFIED="1579570892939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/kmeans" />
   </component>
 </project>

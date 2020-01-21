@@ -59,32 +59,39 @@ def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent):
 
 #二分K-均值聚类
 def biKmeans(dataSet, k, distMeas=distEclud):
-    m = shape(dataSet)[0]
+    m = shape(dataSet)[0] #60
     clusterAssment = mat(zeros((m,2)))
-    centroid0 = mean(dataSet, axis=0).tolist()[0]
-    centList =[centroid0] #create a list with one centroid
-    for j in range(m):#calc initial Error
-        clusterAssment[j,1] = distMeas(mat(centroid0), dataSet[j,:])**2
+    centroid0 = mean(dataSet, axis=0).tolist()[0] #list [-0.15772275000000002, 1.2253301166666664]
+    centList =[centroid0] #初始质心 create a list with one centroid
+    for j in range(m):#60
+        clusterAssment[j,1] = distMeas(mat(centroid0), dataSet[j,:])**2 # 0-59行 :[[ 0. 18.7155935 ],.....[0. 22.90640658]]：簇索引(0-3)、点到簇质心的距离
     while (len(centList) < k):
         lowestSSE = inf
-        for i in range(len(centList)):
-            ptsInCurrCluster = dataSet[nonzero(clusterAssment[:,0].A==i)[0],:]#get the data points currently in cluster i
-            centroidMat, splitClustAss = kMeans(ptsInCurrCluster, 2, distMeas)
+        for i in range(len(centList)):#len(centList):1-2
+            ptsInCurrCluster = dataSet[nonzero(clusterAssment[:,0].A==i)[0],:]#从clusterAssment得到簇索引为i的dataSet, ptsInCurrCluster是dataSet的子集
+            centroidMat, splitClustAss = kMeans(ptsInCurrCluster, 2, distMeas) #对子集进行拆分，划分出2个质心centroidMat
             sseSplit = sum(splitClustAss[:,1])#compare the SSE to the currrent minimum
             sseNotSplit = sum(clusterAssment[nonzero(clusterAssment[:,0].A!=i)[0],1])
-            print("sseSplit, and notSplit: ",sseSplit,sseNotSplit)
+            # print("sseSplit, and notSplit: ",sseSplit,sseNotSplit)
             if (sseSplit + sseNotSplit) < lowestSSE:
                 bestCentToSplit = i
-                bestNewCents = centroidMat
-                bestClustAss = splitClustAss.copy()
+                bestNewCents = centroidMat  #存放2个质心＝centroidMat
+                bestClustAss = splitClustAss.copy() #第一次bestClustAss会赋值。bestClustAss：子集数据点对应的该质点簇索引[第一列]、距离［第二列］
                 lowestSSE = sseSplit + sseNotSplit
-        bestClustAss[nonzero(bestClustAss[:,0].A == 1)[0],0] = len(centList) #change 1 to 3,4, or whatever
-        bestClustAss[nonzero(bestClustAss[:,0].A == 0)[0],0] = bestCentToSplit
-        print('the bestCentToSplit is: ',bestCentToSplit)
-        print('the len of bestClustAss is: ', len(bestClustAss))
-        centList[bestCentToSplit] = bestNewCents[0,:].tolist()[0]#replace a centroid with two best centroids
-        centList.append(bestNewCents[1,:].tolist()[0])
-        clusterAssment[nonzero(clusterAssment[:,0].A == bestCentToSplit)[0],:]= bestClustAss#reassign new clusters, and SSE
+
+
+        #第一个质心对应的数据点的簇索引、到该质心的距离：bestClustAss[nonzero(bestClustAss[:,0].A == 0)[0]]
+        #第二个质心对应的数据点的簇索引、到该质心的距离：bestClustAss[nonzero(bestClustAss[:,0].A == 1)[0]]
+
+        bestClustAss[nonzero(bestClustAss[:,0].A == 1)[0],0] = len(centList) #修改对应第一个质心的数据点的簇索引
+        bestClustAss[nonzero(bestClustAss[:,0].A == 0)[0],0] = bestCentToSplit  #修改对应第二个质心的数据点的簇索引
+        # print('the bestCentToSplit is: ',bestCentToSplit)
+        # print('the len of bestClustAss is: ', len(bestClustAss))
+        
+        #centList循环保存质心
+        centList[bestCentToSplit] = bestNewCents[0,:].tolist()[0] #bestNewCents第一行,第一个质心[1.23710375, 0.17480612499999998] replace a centroid with two best centroids
+        centList.append(bestNewCents[1,:].tolist()[0])   # bestNewCents第二行,第二个质心[-2.94737575, 3.3263781000000003]
+        clusterAssment[nonzero(clusterAssment[:,0].A == bestCentToSplit)[0],:]= bestClustAss # 60*2不变. 所有数据点的新簇索引、点到新簇质心的距离 reassign new clusters, and SSE
     return mat(centList), clusterAssment
 
 
@@ -97,7 +104,7 @@ def biKmeans(dataSet, k, distMeas=distEclud):
 
 dataMat=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch10/testSet2.txt')
 centList,clusterAssment=biKmeans(dataMat,3)
-print(centList)
+# print(centList)
 
 
 #对nozero的测试

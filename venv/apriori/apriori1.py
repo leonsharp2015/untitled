@@ -1,8 +1,8 @@
 from numpy import *
+import copy
 
 def loadDataSet():
     return [[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5]]
-
 
 def createC1(dataSet):
     C1 = []
@@ -16,19 +16,18 @@ def createC1(dataSet):
     return map(frozenset, C1)  # use frozen set so we can use it as a key in a dict
 
 def scanD(D, Ck, minSupport):
-    numItems=len(list(D))
-    print(numItems)
+    D_copy = copy.deepcopy(D)
+    can_list=list(Ck)
     ssCnt = {}
-    for tid in D:
-        for can in Ck:
+    for tid in D: #[[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5]]
+        for can in can_list:#can_list:[1],[2],[3],[4],[5]
             if can.issubset(tid):
-                #if not ssCnt.has_key(can): ssCnt[can]=1
                 if not can in ssCnt:
                     ssCnt[can] = 1
                 else:
                     ssCnt[can] += 1
 
-    numItems = len(list(D))
+    numItems = len(list(D_copy))
     retList = []
     supportData = {}
     for key in ssCnt:
@@ -40,9 +39,10 @@ def scanD(D, Ck, minSupport):
 
 
 ds=loadDataSet()
-c1=createC1(ds)
-D=map(set,ds) #list(map)可以显示map的数据
-L1,suppd=scanD(D,c1,1)
+D=map(set,ds) #python3 map(set,ds)是迭代器.[[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5]]
+c1=createC1(ds) #[frozenset({1}), frozenset({2}), frozenset({3}), frozenset({4}), frozenset({5})]
+#L1:每个单物品项集至少出现在50%以上的记录中
+L1,suppd=scanD(D,c1,0.5)#[frozenset({1}), frozenset({3}), frozenset({2}), frozenset({5})]
 print(L1)
 
 

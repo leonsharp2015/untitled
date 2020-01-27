@@ -1,4 +1,6 @@
 from numpy import *
+import matplotlib
+import matplotlib.pyplot as plt
 def loadDataSet():
     fr=open('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch13/testSet.txt')
     strArr=[line.strip().split('\t') for line in fr.readlines()]
@@ -12,13 +14,18 @@ def pca(dataMat, topNfeat=9999999):
     eigValInd = argsort(eigVals)            #sort, sort goes smallest to largest
     eigValInd = eigValInd[:-(topNfeat+1):-1]  #cut off unwanted dimensions
     redEigVects = eigVects[:,eigValInd]       #reorganize eig vects largest to smallest
-    lowDDataMat = meanRemoved * redEigVects#transform data into new dimensions
-    reconMat = (lowDDataMat * redEigVects.T) + meanVals
+    lowDDataMat = meanRemoved * redEigVects #降维，数据的新坐标 transform data into new dimensions
+    reconMat = (lowDDataMat * redEigVects.T) + meanVals #将降维的数据新坐标，转为原坐标
     return lowDDataMat, reconMat
 
-# dataMat=loadDataSet() #1000*2
-# print(dataMat[0:5,:])
-# lowDataMat,reconMat=pca(dataMat,1)
+dataMat=loadDataSet() #1000*2
+lowDataMat,reconMat=pca(dataMat,1)
+fig=plt.figure()
+ax=fig.add_subplot(111)
+ax.scatter(dataMat[:,0].flatten().A[0],dataMat[:,1].flatten().A[0],marker='^',s=90)
+ax.scatter(reconMat[:,0].flatten().A[0],reconMat[:,1].flatten().A[0],marker='o',s=50,c='red')#对比
+plt.show()
+
 
 
 # data=array([[10.235186,11.321997],

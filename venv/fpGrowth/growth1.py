@@ -47,15 +47,15 @@ def createTree(dataSet, minSup=1):  # create FP-tree from dataset but don't mine
     return retTree, headerTable  # return tree and header table
 
 
-#headerTable是字典：key=单词，value＝[次数,None]
+#headerTable是字典：key=单词，value＝[次数,None(同名的一个节点)]
 def updateTree(items, inTree, headerTable, count):#将子集合内的高频单词，形成树:一个子集合内的高频单词，形成父节点－》子节点－》子节点
     key=items[0] #高频单词
     if key in inTree.children:  # check if orderedItems[0] in retTree.children
         inTree.children[key].inc(count)  # incrament count
     else:  # add items[0] to inTree.children
-        inTree.children[key] = treeNode(key, count, inTree)
+        inTree.children[key] = treeNode(key, count, inTree) #生成items［0］子节点
         if headerTable[key][1] == None:  # update header table
-            headerTable[key][1] = inTree.children[key]
+            headerTable[key][1] = inTree.children[key] #更新headerTable的value头指针
         else:
             updateHeader(headerTable[key][1], inTree.children[key])
     if len(items) > 1:  # call updateTree() with remaining ordered items
@@ -67,6 +67,24 @@ def updateHeader(nodeToTest, targetNode):  # this version does not use recursion
     while (nodeToTest.nodeLink != None):  # Do not use recursion to traverse a linked list!
         nodeToTest = nodeToTest.nodeLink
     nodeToTest.nodeLink = targetNode
+
+
+def ascendTree(leafNode, prefixPath):  # ascends from leaf node to root
+    if leafNode.parent != None:
+        prefixPath.append(leafNode.name)
+        ascendTree(leafNode.parent, prefixPath)
+
+
+def findPrefixPath(basePat, treeNode):  # treeNode comes from header table
+    condPats = {}
+    while treeNode != None:
+        prefixPath = []
+        ascendTree(treeNode, prefixPath)
+        if len(prefixPath) > 1:
+            condPats[frozenset(prefixPath[1:])] = treeNode.count
+        treeNode = treeNode.nodeLink
+    return condPats
+
 
 def loadSimpDat():
     simpDat = [['r', 'z', 'h', 'j', 'p'],
@@ -106,8 +124,5 @@ def createInitSet(dataSet):
 
 simpData=loadSimpDat()
 initSet=createInitSet(simpData)
-mytree,headerTab=createTree(initSet,3)
-mytree.disp()
-
-
-
+mytree,myHeaderTab=createTree(initSet,3)
+print(findPrefixPath('x',myHeaderTab['x'][1]))

@@ -40,6 +40,25 @@ def standEst(dataMat, user, simMeas, item):#item:user评分为0的列索引
     else:
         return ratSimTotal / simTotal #item的打分
 
+
+def svdEst(dataMat, user, simMeas, item):#svd矩阵分解
+    n = shape(dataMat)[1]
+    simTotal = 0.0; ratSimTotal = 0.0
+    U,Sigma,VT = la.svd(dataMat)
+    Sig4 = mat(eye(4)*Sigma[:4]) #对角矩阵 arrange Sig4 into a diagonal matrix
+    xformedItems = dataMat.T * U[:,:4] * Sig4.I  #构造为低维矩阵。包含大多数原矩阵的量。create transformed items
+    for j in range(n):
+        userRating = dataMat[user,j]
+        if userRating == 0 or j==item: continue
+        similarity = simMeas(xformedItems[item,:].T,xformedItems[j,:].T)
+        print ('the %d and %d similarity is: %f' % (item, j, similarity))
+        simTotal += similarity
+        ratSimTotal += similarity * userRating
+    if simTotal == 0:
+        return 0
+    else:
+        return ratSimTotal/simTotal
+
 def recommend(dataMat, user, N=3, simMeas=cosSim, estMethod=standEst):
     unratedItems = nonzero(dataMat[user,:].A==0)[1]#nonzero：返回2个array,array1存放dataMat内不为0的行索引，array2存放不为0的列索引 。矩阵内user行，列为0的列索引
     if len(unratedItems) == 0: return 'you rated everything'
@@ -60,24 +79,43 @@ def recommend(dataMat, user, N=3, simMeas=cosSim, estMethod=standEst):
 # print(num,(1+16+49)**0.5)
 # denom = la.norm(v1) * la.norm(v2)
 
-data=[
- [4,4,0,2,2],
- [4,0,0,3,3],
- [4,0,0,1,1],
- [1,1,1,2,0],
- [2,2,2,0,0],
- [1,1,1,0,0],
- [5,5,5,0,0]]
-# myDat=mat(loadExData())
-# myDat[0,1]=myDat[0,0]=myDat[1,0]=myDat[2,0]=4
-# myDat[3,3]=2
+# data=[
+#  [4,4,0,2,2],
+#  [4,0,0,3,3],
+#  [4,0,0,1,1],
+#  [1,1,1,2,0],
+#  [2,2,2,0,0],
+#  [1,1,1,0,0],
+#  [5,5,5,0,0]]
+# myDat=mat(data)
+# items_score=recommend(myDat,2) #user=2
+# print(items_score)
 
-myDat=mat(data)
-aa=recommend(myDat,2) #user=2
-# print(aa)
+data=[     [0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 5],
+           [0, 0, 0, 3, 0, 4, 0, 0, 0, 0, 3],
+           [0, 0, 0, 0, 4, 0, 0, 1, 0, 4, 0],
+           [3, 3, 4, 0, 0, 0, 0, 2, 2, 0, 0],
+           [5, 4, 5, 0, 0, 0, 0, 5, 5, 0, 0],
+           [0, 0, 0, 0, 5, 0, 1, 0, 0, 5, 0],
+           [4, 3, 4, 0, 0, 0, 0, 5, 5, 0, 1],
+           [0, 0, 0, 4, 0, 4, 0, 0, 0, 0, 4],
+           [0, 0, 0, 2, 0, 2, 5, 0, 0, 1, 2],
+           [0, 0, 0, 0, 5, 0, 0, 0, 0, 4, 0],
+           [1, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0]]
 
-# U,sigma,VT=linalg.svd([[1,1,3],[7,7,2]])
-# print(U,'--',sigma,'----',VT)
+mat1=mat(data)
+U,sigma,VT=linalg.svd(mat1)
+sig2=sigma**2
+s1=sum(sig2)
+
+
+
+
+
+
+
+
+
 
 
 

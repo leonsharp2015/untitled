@@ -38,14 +38,14 @@ def standEst(dataMat, user, simMeas, item):#item:user评分为0的列索引
     if simTotal == 0:
         return 0
     else:
-        return ratSimTotal / simTotal
+        return ratSimTotal / simTotal #item的打分
 
 def recommend(dataMat, user, N=3, simMeas=cosSim, estMethod=standEst):
     unratedItems = nonzero(dataMat[user,:].A==0)[1]#nonzero：返回2个array,array1存放dataMat内不为0的行索引，array2存放不为0的列索引 。矩阵内user行，列为0的列索引
     if len(unratedItems) == 0: return 'you rated everything'
     itemScores = []
     for item in unratedItems:#user评分为0的列: 1,2
-        estimatedScore = estMethod(dataMat, user, simMeas, item) #默认预估standEst,余弦距离
+        estimatedScore = estMethod(dataMat, user, simMeas, item) #评分的估计分数。默认预估standEst,余弦距离
         itemScores.append((item, estimatedScore))
     return sorted(itemScores, key=lambda jj: jj[1], reverse=True)[:N]
 
@@ -74,7 +74,7 @@ data=[
 
 myDat=mat(data)
 aa=recommend(myDat,2) #user=2
-print(aa)
+# print(aa)
 
 # U,sigma,VT=linalg.svd([[1,1,3],[7,7,2]])
 # print(U,'--',sigma,'----',VT)

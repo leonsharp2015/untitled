@@ -242,7 +242,7 @@
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
       <workItem from="1576850416767" duration="138909000" />
-      <workItem from="1578738003317" duration="124046000" />
+      <workItem from="1578738003317" duration="125156000" />
     </task>
     <servers />
   </component>
@@ -291,38 +291,38 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1238" height="232" key="GridCell.Tab.0.bottom" timestamp="1580199430116">
+    <state width="1238" height="232" key="GridCell.Tab.0.bottom" timestamp="1580200286018">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580199430116" />
-    <state width="1238" height="232" key="GridCell.Tab.0.center" timestamp="1580199430115">
+    <state width="1238" height="232" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580200286018" />
+    <state width="1238" height="232" key="GridCell.Tab.0.center" timestamp="1580200286018">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1580199430115" />
-    <state width="1238" height="232" key="GridCell.Tab.0.left" timestamp="1580199430114">
+    <state width="1238" height="232" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1580200286018" />
+    <state width="1238" height="232" key="GridCell.Tab.0.left" timestamp="1580200286017">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1580199430114" />
-    <state width="1238" height="232" key="GridCell.Tab.0.right" timestamp="1580199430115">
+    <state width="1238" height="232" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1580200286017" />
+    <state width="1238" height="232" key="GridCell.Tab.0.right" timestamp="1580200286018">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1580199430115" />
-    <state width="1238" height="232" key="GridCell.Tab.1.bottom" timestamp="1580199430118">
+    <state width="1238" height="232" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1580200286018" />
+    <state width="1238" height="232" key="GridCell.Tab.1.bottom" timestamp="1580200286020">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580199430118" />
-    <state width="1238" height="232" key="GridCell.Tab.1.center" timestamp="1580199430117">
+    <state width="1238" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580200286020" />
+    <state width="1238" height="232" key="GridCell.Tab.1.center" timestamp="1580200286019">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1580199430117" />
-    <state width="1238" height="232" key="GridCell.Tab.1.left" timestamp="1580199430117">
+    <state width="1238" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1580200286019" />
+    <state width="1238" height="232" key="GridCell.Tab.1.left" timestamp="1580200286019">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1580199430117" />
-    <state width="1238" height="232" key="GridCell.Tab.1.right" timestamp="1580199430118">
+    <state width="1238" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1580200286019" />
+    <state width="1238" height="232" key="GridCell.Tab.1.right" timestamp="1580200286019">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1580199430118" />
+    <state width="1238" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1580200286019" />
     <state x="434" y="95" key="RollbackChangesDialog" timestamp="1579402021632">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -359,7 +359,7 @@
     <SUITE FILE_PATH="coverage/untitled$shanonEnd.coverage" NAME="shanonEnd Coverage Results" MODIFIED="1577979750533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
     <SUITE FILE_PATH="coverage/untitled$apriori1.coverage" NAME="apriori1 Coverage Results" MODIFIED="1579751404559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/apriori" />
     <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577194944558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$svd1.coverage" NAME="svd1 Coverage Results" MODIFIED="1580199031938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
+    <SUITE FILE_PATH="coverage/untitled$svd1.coverage" NAME="svd1 Coverage Results" MODIFIED="1580200276020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
     <SUITE FILE_PATH="coverage/untitled$bayes.coverage" NAME="bayes1 Coverage Results" MODIFIED="1578493564018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/bayes" />
     <SUITE FILE_PATH="coverage/untitled$kmean1.coverage" NAME="kmean1 Coverage Results" MODIFIED="1579599463556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/kmeans" />
   </component>

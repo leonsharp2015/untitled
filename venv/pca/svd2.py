@@ -62,15 +62,24 @@ data2=[[2,4,9],
       [8,0,8],
       [3,2,5]]
 mat1=mat(data2)#4*3
+# U,sigma,VT=linalg.svd(data2) #4*4,4*3,3*3
 U,sigma,VT=linalg.svd(data2) #4*4,4*3,3*3
+U2,sigma2,VT2=linalg.svd(mat(data2))
+
 m_sigma=zeros((U.shape[1],sigma.shape[0]))
 m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
 result=dot(dot(U,m_sigma),VT)
 # print(result)
 
-t=allclose(data2, dot(U[:, :3] * sigma, VT)) #两个矩阵元素是否相近
-# print(dot(u[:, :3] * s, vh))
-# print(dot(u, dot(m_sigma, vh)))
+#ok
+# U[:, :3] * sigma
+# U2[:, :3] * diag(sigma2)
+
+
+# t=allclose(data2, dot(U[:, :3] * sigma, VT)) #两个矩阵元素是否相近
+# print(dot(U[:, :3] * diag(sigma),VT))
+# print(dot(U[:, :4] * m_sigma,VT))
+
 
 #ok
 # m_sigma=zeros((4,3))

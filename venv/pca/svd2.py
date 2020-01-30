@@ -1,103 +1,6 @@
 from numpy import  *
 from numpy import linalg as la
 
-def loadExData():
-    return[[0, 0, 0, 2, 2],
-           [0, 0, 0, 3, 3],
-           [0, 0, 0, 1, 1],
-           [1, 1, 1, 0, 0],
-           [2, 2, 2, 0, 0],
-           [1, 1, 1, 0, 0],
-           [5, 5, 5, 0, 0]]
-
-def cosSim(inA,inB):#余弦距离：a.b/|a||b|
-    num = float(inA.T*inB)#矢量内积 a.b
-    denom = la.norm(inA)*la.norm(inB)#|a|*|b|矢量范数
-    return 0.5+0.5*(num/denom)
-
-def standEst(dataMat, user, simMeas, item):#item:user评分为0的列索引
-    n = shape(dataMat)[1]
-    simTotal = 0.0;
-    ratSimTotal = 0.0
-    for j in range(n):#dataMat的每一列
-        userRating = dataMat[user, j]#该列被user打分
-        if userRating == 0:
-            continue
-        #item 1,2
-        #item=1:j=0 overLap=[0,3,4,5,6]  j=3 overLap=[0,3] j=4 overLap=[0]
-        overLap = nonzero(logical_and(dataMat[:, item].A > 0,dataMat[:, j].A > 0))[0]#在dataMat所有行中，item列不为0，j列也不为0的行集合。(选出item列有值，j列也同时有值的行集合）
-        if len(overLap) == 0:
-            similarity = 0
-        else:
-            v1=dataMat[overLap, item] #item列和j列同时有值，item列已经评分的item值集合，作为向量
-            v2=dataMat[overLap, j] #item列和j列同时有值，对应的j列的值集合，作为向量
-            similarity = simMeas(v1,v2)
-        print('user %d noscore_columnIndex %d and isscore_columnIndex %d similarity is: %f' % (user,item, j, similarity))
-        simTotal += similarity
-        ratSimTotal += similarity * userRating
-    if simTotal == 0:
-        return 0
-    else:
-        return ratSimTotal / simTotal #item的打分
-
-
-def svdEst(dataMat, user, simMeas, item):#svd矩阵分解
-    n = shape(dataMat)[1]
-    simTotal = 0.0; ratSimTotal = 0.0
-    U,Sigma,VT = la.svd(dataMat)
-    Sig4 = mat(eye(4)*Sigma[:4]) #对角矩阵 arrange Sig4 into a diagonal matrix
-    xformedItems = dataMat.T * U[:,:4] * Sig4.I  #构造为低维矩阵。包含大多数原矩阵的量。create transformed items
-    for j in range(n):
-        userRating = dataMat[user,j]
-        if userRating == 0 or j==item: continue
-        similarity = simMeas(xformedItems[item,:].T,xformedItems[j,:].T)
-        print ('the %d and %d similarity is: %f' % (item, j, similarity))
-        simTotal += similarity
-        ratSimTotal += similarity * userRating
-    if simTotal == 0:
-        return 0
-    else:
-        return ratSimTotal/simTotal
-
-def recommend(dataMat, user, N=3, simMeas=cosSim, estMethod=standEst):
-    unratedItems = nonzero(dataMat[user,:].A==0)[1]#nonzero：返回2个array,array1存放dataMat内不为0的行索引，array2存放不为0的列索引 。矩阵内user行，列为0的列索引
-    if len(unratedItems) == 0: return 'you rated everything'
-    itemScores = []
-    for item in unratedItems:#user评分为0的列: 1,2
-        estimatedScore = estMethod(dataMat, user, simMeas, item) #评分的估计分数。默认预估standEst,余弦距离
-        itemScores.append((item, estimatedScore))
-    return sorted(itemScores, key=lambda jj: jj[1], reverse=True)[:N]
-
-#--------------------------------
-
-def Mat_print(inMat, thresh=0.8):
-    for i in range(32):
-        for k in range(32):
-            if float(inMat[i,k]) > thresh:
-                print(1),
-            else: print(0),
-        print ('')
-
-def imgCompress(numSV=3, thresh=0.8):
-    myl = []
-    for line in open('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch14/0_5.txt').readlines():#32列
-        newRow = []
-        for i in range(32):
-            newRow.append(int(line[i]))
-        myl.append(newRow)
-    myMat = mat(myl)
-    print ("****original matrix******")
-    Mat_print(myMat, thresh)
-    U,Sigma,VT = la.svd(myMat)
-    SigRecon = mat(zeros((numSV, numSV)))
-    for k in range(numSV):#construct diagonal matrix from vector
-        SigRecon[k,k] = Sigma[k]
-    reconMat = U[:,:numSV]*SigRecon*VT[:numSV,:]
-    print ("****reconstructed matrix using %d singular values******" % numSV)
-    Mat_print(reconMat, thresh)
-
-
-
 #范数
 # data=[[1,2,3],
 #       [4,5,6],
@@ -269,5 +172,3 @@ t=allclose(data1, dot(u[:, :3] * s, vh)) #两个矩阵元素是否相近
 #         ])
 # print(u1[:, :3]*s1) #每个元素分别相乘
 # print(dot(u1[:, :3]*s1,v1))#矩阵相乘
-
-

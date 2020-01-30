@@ -167,15 +167,16 @@ def imgCompress(numSV=3, thresh=0.8):
 # print(U,sigma,VT)
 
 #?????
-data2=[[1,0,1],
-      [-1,-2,0],
-      [0,1,-1]]
-mat1=mat(data2)#3*3
-U,sigma,VT=linalg.svd(mat1,full_matrices=0) #3*3,3*3,3*3
-m_sigma=mat([[2.46050487,0,0],[0,1.69962815,0],[0,0,0.23912328]])
+# data2=[[1,0,1],
+#       [-1,-2,0],
+#       [0,1,-1],
+#       [0,2,1]]
+# mat1=mat(data2)#4*3
+# U,sigma,VT=linalg.svd(mat1) #4*4,4*3,3*3
+# m_sigma=mat([[3.12324176,0,0],[0,1.75518256,0],[0,0,1.0792104],[0,0,0]])
 # print(U*m_sigma*VT.T)
 # print(VT*VT.T)
-print(U,sigma,VT)
+# print(U,sigma,VT)
 
 
 # data3=[[7,10],
@@ -186,4 +187,23 @@ print(U,sigma,VT)
 # m_sigma=mat([[26.12872811,0],[0,8.26375019],[0,0]])
 # # print(U,sigma,VT)
 # print(U*m_sigma*VT.T)
+
+data1=[[4,2,-5],[6,4,-9],[5,3,-7]]
+A=mat(data1)
+#w 每个特征向量的矢量范数=1
+#w1 = la.norm(w[:,2]) # |a|矢量范数
+#特征向量：
+#r1=[0.57735027,0.57735027,0.57735027]
+#r2=[-0.26726123,-0.80178373,-0.53452248]
+#r3=[0.26726125,0.80178372,0.53452249]
+eigVals,w =linalg.eig(A)#特征值约等于[1,0,0],标准化特征向量所张成的n×n维矩阵：U=[r1,r2,r3] 即r1=w[:,0],r2=w[:,1],r3=w[:,2]
+sigma=mat(eye(3)*eigVals[:3])
+A2=w*sigma*w.I #任何方阵可以分解为n个特征向量所张成的n×n维矩阵、Σ为这n个特征值为主对角线的n×n维矩阵
+print(A2)
+
+
+
+
+
+
 

@@ -188,6 +188,7 @@ def imgCompress(numSV=3, thresh=0.8):
 # # print(U,sigma,VT)
 # print(U*m_sigma*VT.T)
 
+#方阵按特征向量分解：A=w*sigma*w.I
 data1=[[4,2,-5],[6,4,-9],[5,3,-7]]
 # data1=[[4,2,-5],[2,7,-9],[-5,-9,6]] #对称矩阵
 A=mat(data1)
@@ -199,10 +200,8 @@ A=mat(data1)
 #r2=[-0.26726123,-0.80178373,-0.53452248]
 #r3=[0.26726125,0.80178372,0.53452249]
 eigVals,w =linalg.eig(A)#特征值约等于[1,0,0],标准化特征向量所张成的n×n维矩阵：U=[r1,r2,r3] 即r1=w[:,0],r2=w[:,1],r3=w[:,2]
-sigma=mat(eye(3)*eigVals[:3])
+sigma=diag(eigVals) #特征值转为矩阵 sigma=mat(eye(3)*eigVals[:3])
 A2=w*sigma*w.I #任何方阵可以分解为n个特征向量所张成的n×n维矩阵、Σ为这n个特征值为主对角线的n×n维矩阵、I为矩阵的逆
-
-
 
 
 

@@ -164,12 +164,26 @@ def imgCompress(numSV=3, thresh=0.8):
 # U,sigma,VT=linalg.svd(mat1) #4*4,4*3,3*3
 # m_sigma=mat([[19.39838809,0,0],[0,6.41821987,0],[0,0,1.87323072],[0,0,0]])
 # print(U*m_sigma*VT.T)
+# print(U,sigma,VT)
 
-data3=[[0,1],
-       [1,1],
-       [1,0]]
-mat1=mat(data3)#3*2
-U,sigma,VT=linalg.svd(mat1)#3*3,3*2,2*2
-m_sigma=mat([[1.73205081,0],[0,1],[0,0]])
-print(U*m_sigma*VT.T)
+#?????
+data2=[[1,0,1],
+      [-1,-2,0],
+      [0,1,-1]]
+mat1=mat(data2)#3*3
+U,sigma,VT=linalg.svd(mat1,full_matrices=0) #3*3,3*3,3*3
+m_sigma=mat([[2.46050487,0,0],[0,1.69962815,0],[0,0,0.23912328]])
+# print(U*m_sigma*VT.T)
+# print(VT*VT.T)
+print(U,sigma,VT)
+
+
+# data3=[[7,10],
+#        [12,1],
+#        [21,4]]
+# mat1=mat(data3)#3*2
+# U,sigma,VT=linalg.svd(mat1)#3*3,3*2,2*2
+# m_sigma=mat([[26.12872811,0],[0,8.26375019],[0,0]])
+# # print(U,sigma,VT)
+# print(U*m_sigma*VT.T)
 

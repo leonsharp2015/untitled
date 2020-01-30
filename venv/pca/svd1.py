@@ -145,20 +145,31 @@ def imgCompress(numSV=3, thresh=0.8):
 # xformedItems = mat1.T * U[:, :4] * Sig4.I #数据集降维
 # redata = U[:,:4] * Sig4 * VT[:4,:]   # 重构
 
-data=[[2,4],
-      [1,3],
-      [0,0],
-      [0,0]]
-mat1=mat(data)#4*2
-U,sigma,VT=linalg.svd(mat1) #4*4,4*2,2*2
-m_sigma=mat([[5.4649857,0],[0,0.36596619],[0,0],[0,0]])
-result=U*m_sigma*VT.T
-print(result)
+# data=[[2,4],
+#       [1,3],
+#       [0,0],
+#       [0,0]]
+# mat1=mat(data)#4*2
+# U,sigma,VT=linalg.svd(mat1) #4*4,4*2,2*2
+# m_sigma=mat([[5.4649857,0],[0,0.36596619],[0,0],[0,0]])
+# result=U*m_sigma*VT.T
+# print(U)
 
+#????
+# data2=[[2,4,9],
+#       [1,3,12],
+#       [8,0,8],
+#       [3,2,5]]
+# mat1=mat(data2)#4*3
+# U,sigma,VT=linalg.svd(mat1) #4*4,4*3,3*3
+# m_sigma=mat([[19.39838809,0,0],[0,6.41821987,0],[0,0,1.87323072],[0,0,0]])
+# print(U*m_sigma*VT.T)
 
-
-
-
-
-
+data3=[[0,1],
+       [1,1],
+       [1,0]]
+mat1=mat(data3)#3*2
+U,sigma,VT=linalg.svd(mat1)#3*3,3*2,2*2
+m_sigma=mat([[1.73205081,0],[0,1],[0,0]])
+print(U*m_sigma*VT.T)
 

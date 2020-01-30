@@ -68,6 +68,37 @@ def recommend(dataMat, user, N=3, simMeas=cosSim, estMethod=standEst):
         itemScores.append((item, estimatedScore))
     return sorted(itemScores, key=lambda jj: jj[1], reverse=True)[:N]
 
+#--------------------------------
+
+def printMat(inMat, thresh=0.8):
+    for i in range(32):
+        for k in range(32):
+            if float(inMat[i,k]) > thresh:
+                print(1),
+            else: print(0),
+        print ('')
+
+def imgCompress(numSV=3, thresh=0.8):
+    myl = []
+    for line in open('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch14/0_5.txt').readlines():#32列
+        newRow = []
+        for i in range(32):
+            newRow.append(int(line[i]))
+        myl.append(newRow)
+    myMat = mat(myl)
+    print ("****original matrix******")
+    printMat(myMat, thresh)
+    U,Sigma,VT = la.svd(myMat)
+    SigRecon = mat(zeros((numSV, numSV)))
+    for k in range(numSV):#construct diagonal matrix from vector
+        SigRecon[k,k] = Sigma[k]
+    reconMat = U[:,:numSV]*SigRecon*VT[:numSV,:]
+    print ("****reconstructed matrix using %d singular values******" % numSV)
+    printMat(reconMat, thresh)
+
+
+
+#范数
 # data=[[1,2,3],
 #       [4,5,6],
 #       [7,8,9]]
@@ -91,28 +122,36 @@ def recommend(dataMat, user, N=3, simMeas=cosSim, estMethod=standEst):
 # items_score=recommend(myDat,2) #user=2
 # print(items_score)
 
-data=[     [0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 5],
-           [0, 0, 0, 3, 0, 4, 0, 0, 0, 0, 3],
-           [0, 0, 0, 0, 4, 0, 0, 1, 0, 4, 0],
-           [3, 3, 4, 0, 0, 0, 0, 2, 2, 0, 0],
-           [5, 4, 5, 0, 0, 0, 0, 5, 5, 0, 0],
-           [0, 0, 0, 0, 5, 0, 1, 0, 0, 5, 0],
-           [4, 3, 4, 0, 0, 0, 0, 5, 5, 0, 1],
-           [0, 0, 0, 4, 0, 4, 0, 0, 0, 0, 4],
-           [0, 0, 0, 2, 0, 2, 5, 0, 0, 1, 2],
-           [0, 0, 0, 0, 5, 0, 0, 0, 0, 4, 0],
-           [1, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0]]
+#svd奇异值的能量
+# data=[     [0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 5],
+#            [0, 0, 0, 3, 0, 4, 0, 0, 0, 0, 3],
+#            [0, 0, 0, 0, 4, 0, 0, 1, 0, 4, 0],
+#            [3, 3, 4, 0, 0, 0, 0, 2, 2, 0, 0],
+#            [5, 4, 5, 0, 0, 0, 0, 5, 5, 0, 0],
+#            [0, 0, 0, 0, 5, 0, 1, 0, 0, 5, 0],
+#            [4, 3, 4, 0, 0, 0, 0, 5, 5, 0, 1],
+#            [0, 0, 0, 4, 0, 4, 0, 0, 0, 0, 4],
+#            [0, 0, 0, 2, 0, 2, 5, 0, 0, 1, 2],
+#            [0, 0, 0, 0, 5, 0, 0, 0, 0, 4, 0],
+#            [1, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0]]
 
-mat1=mat(data)
-U,sigma,VT=linalg.svd(mat1)
-sig2=sigma**2
-s1=sum(sig2)
+# mat1=mat(data)#11*11
+# U,sigma,VT=linalg.svd(mat1) #11*11
+# sig2=sigma**2
+# s_all=sum(sig2)
+# s_1=sum(sig2[:2])
 
+# Sig4 = mat(eye(4) * sigma[:4])  # 4对角矩阵 arrange Sig4 into a diagonal matrix
+# xformedItems = mat1.T * U[:, :4] * Sig4.I #数据集降维
+# redata = U[:,:4] * Sig4 * VT[:4,:]   # 重构
 
-
-
-
-
+data=[[2,4],
+      [1,3],
+      [0,0],
+      [0,0]]
+mat1=mat(data)#4*2
+U,sigma,VT=linalg.svd(mat1) #4*4,4*2,2*2
+m_sigma=mat([[5.4649857,0],[0,0.36596619],[0,0],[0,0]])
 
 
 

@@ -145,15 +145,18 @@ def imgCompress(numSV=3, thresh=0.8):
 # xformedItems = mat1.T * U[:, :4] * Sig4.I #数据集降维
 # redata = U[:,:4] * Sig4 * VT[:4,:]   # 重构
 
-data=[[2,4],
-      [1,3],
-      [0,0],
-      [0,0]]
-mat1=mat(data)#4*2
-U,sigma,VT=linalg.svd(mat1) #4*4,4*2,2*2
-m_sigma=mat([[5.4649857,0],[0,0.36596619],[0,0],[0,0]])
-result=U*m_sigma*VT.T
-print(result)
+#ok
+# data=[[2,4],
+#       [1,3],
+#       [0,0],
+#       [0,0]]
+# mat1=mat(data)#4*2
+# U,sigma,VT=linalg.svd(mat1) #4*4,4*2,2*2
+# # m_sigma=mat([[5.4649857,0],[0,0.36596619],[0,0],[0,0]])
+# m_sigma=zeros((U.shape[1],sigma.shape[0]))
+# m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
+# result=dot(dot(U,m_sigma),VT.T)
+# print(result)
 
 #????
 # data2=[[2,4,9],
@@ -162,9 +165,11 @@ print(result)
 #       [3,2,5]]
 # mat1=mat(data2)#4*3
 # U,sigma,VT=linalg.svd(mat1) #4*4,4*3,3*3
-# m_sigma=mat([[19.39838809,0,0],[0,6.41821987,0],[0,0,1.87323072],[0,0,0]])
-# print(U*m_sigma*VT.T)
-# print(U,sigma,VT)
+# # m_sigma=mat([[19.39838809,0,0],[0,6.41821987,0],[0,0,1.87323072],[0,0,0]])
+# m_sigma=zeros((U.shape[1],sigma.shape[0]))
+# m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
+# result=dot(dot(U,m_sigma),VT.T)
+# print(result)
 
 #?????
 # data2=[[1,0,1],
@@ -233,12 +238,14 @@ u, s, vh=linalg.svd(data1)#4*4,4*3,3*3
 #     [0,11.07993065,0],
 #     [0,0,7.13719934],
 #     [0,0,0]])
-# B=dot(dot(u,mat(m_sigma)),vh.T)
-# print(B)
-#ok
-m_sigma=zeros((4,3))
-m_sigma[:3, :3] = diag(s)
+m_sigma=zeros((u.shape[1],s.shape[0]))
+m_sigma[:s.shape[0],:s.shape[0]]=diag(s)
 B=dot(dot(u,mat(m_sigma)),vh.T)
+print(B)
+#ok
+# m_sigma=zeros((4,3))
+# m_sigma[:3, :3] = diag(s)
+# B=dot(dot(u,mat(m_sigma)),vh.T)
 
 
 # u1=array([  [-1,0,-0.1,1],

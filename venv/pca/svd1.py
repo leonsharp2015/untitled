@@ -213,8 +213,10 @@ data1=[[ -9.,   3.,  -7.],
        [  4.,  -8.,  -1.],
        [ -1.,   6.,  -9.],
        [ -4., -10.,   2.]]
+
 u, s, vh=linalg.svd(data1)#4*4,4*3,3*3
-# t=allclose(data1, dot(u[:, :3] * s, vh))
+t=allclose(data1, dot(u[:, :3] * s, vh)) #两个矩阵元素是否相近
+
 # d2=dot(u[:, :3]*s,vh) #4*3
 # print(u[:, :3])
 # print(u[:, :3])
@@ -242,6 +244,7 @@ m_sigma=zeros((u.shape[1],s.shape[0]))
 m_sigma[:s.shape[0],:s.shape[0]]=diag(s)
 B=dot(dot(u,mat(m_sigma)),vh.T)
 print(B)
+
 #ok
 # m_sigma=zeros((4,3))
 # m_sigma[:3, :3] = diag(s)

@@ -13,17 +13,7 @@ from numpy import linalg as la
 # print(num,(1+16+49)**0.5)
 # denom = la.norm(v1) * la.norm(v2)
 
-# data=[
-#  [4,4,0,2,2],
-#  [4,0,0,3,3],
-#  [4,0,0,1,1],
-#  [1,1,1,2,0],
-#  [2,2,2,0,0],
-#  [1,1,1,0,0],
-#  [5,5,5,0,0]]
-# myDat=mat(data)
-# items_score=recommend(myDat,2) #user=2
-# print(items_score)
+
 
 #svd奇异值的能量
 # data=[     [0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 5],
@@ -48,52 +38,7 @@ from numpy import linalg as la
 # xformedItems = mat1.T * U[:, :4] * Sig4.I #数据集降维
 # redata = U[:,:4] * Sig4 * VT[:4,:]   # 重构
 
-#ok
-# data=[[2,4],
-#       [1,3],
-#       [0,0],
-#       [0,0]]
-# mat1=mat(data)#4*2
-# U,sigma,VT=linalg.svd(mat1) #4*4,4*2,2*2
-# # m_sigma=mat([[5.4649857,0],[0,0.36596619],[0,0],[0,0]])
-# m_sigma=zeros((U.shape[1],sigma.shape[0]))
-# m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
-# result=dot(dot(U,m_sigma),VT.T)
-# print(result)
 
-#ok
-# data2=[[2,4,9],
-#       [1,3,12],
-#       [8,0,8],
-#       [3,2,5]]
-# mat1=mat(data2)#4*3
-# U,sigma,VT=linalg.svd(mat1) #4*4,4*3,3*3
-# # m_sigma=mat([[19.39838809,0,0],[0,6.41821987,0],[0,0,1.87323072],[0,0,0]])
-# m_sigma=zeros((U.shape[1],sigma.shape[0]))
-# m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
-# result=dot(dot(U,m_sigma),VT)
-# print(result)
-
-#ok
-# data2=[[1,0,1],
-#       [-1,-2,0],
-#       [0,1,-1],
-#       [0,2,1]]
-# mat1=mat(data2)#4*3
-# U,sigma,VT=linalg.svd(mat1) #4*4,4*3,3*3
-# m_sigma=zeros((U.shape[1],sigma.shape[0]))
-# m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
-# result=dot(dot(U,m_sigma),VT)
-# print(result)
-
-
-# data3=[[7,10],
-#        [12,1],
-#        [21,4]]
-# mat1=mat(data3)#3*2
-# U,sigma,VT=linalg.svd(mat1)#3*3,3*2,2*2 ,U*U.T=E,VT*VT.T=E
-# m_sigma=mat([[26.12872811,0],[0,8.26375019],[0,0]])
-# print(U*m_sigma*VT)
 
 #方阵按特征向量分解：A=w*sigma*w.I
 # data1=[[4,2,-5],[6,4,-9],[5,3,-7]]
@@ -111,46 +56,19 @@ from numpy import linalg as la
 # A2=w*sigma*w.I #任何方阵可以分解为n个特征向量所张成的n×n维矩阵、Σ为这n个特征值为主对角线的n×n维矩阵、I为矩阵的逆
 
 #矩阵的svd分解
-# data1=[[ -9.,   3.,  -7.],
-#        [  4.,  -8.,  -1.],
-#        [ -1.,   6.,  -9.],
-#        [ -4., -10.,   2.]]
 
-data1=[[1,0,1],
-      [-1,-2,0],
-      [0,1,-1],
-      [0,2,1]]
-u, s, vh=linalg.svd(data1)#4*4,4*3,3*3
+data2=[[2,4,9],
+      [1,3,12],
+      [8,0,8],
+      [3,2,5]]
+mat1=mat(data2)#4*3
+U,sigma,VT=linalg.svd(data2) #4*4,4*3,3*3
+m_sigma=zeros((U.shape[1],sigma.shape[0]))
+m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
+result=dot(dot(U,m_sigma),VT)
+# print(result)
 
-# d2=dot(u[:, :3]*s,vh) #4*3
-# print(u[:, :3])
-# print(u[:, :3])
-# print(s)
-# print('---------')
-# print(u[:, :3]*s)
-
-# [[-0.53815289  0.67354057 -0.13816841 -0.48748749]
-#  [ 0.40133556  0.1687729   0.78900752 -0.43348888]
-#  [-0.59291924  0.04174708  0.59180987  0.54448603]
-#  [ 0.44471115  0.71841213 -0.09020922  0.52723647]]
-
-#  [16.86106528 11.07993065  7.13719934]
-
-#  [[ 0.31212695 -0.760911    0.56885078]
-#  [-0.74929793 -0.56527432 -0.3449892 ]
-#  [ 0.58406282 -0.31855829 -0.74658639]]
-
-#ok
-# m_sigma=array([[16.86106528,0,0],
-#     [0,11.07993065,0],
-#     [0,0,7.13719934],
-#     [0,0,0]])
-m_sigma=zeros((u.shape[1],s.shape[0]))
-m_sigma[:s.shape[0],:s.shape[0]]=diag(s)
-B=dot(dot(u,mat(m_sigma)),vh)
-print(B)
-
-t=allclose(data1, dot(u[:, :3] * s, vh)) #两个矩阵元素是否相近
+t=allclose(data2, dot(U[:, :3] * sigma, VT)) #两个矩阵元素是否相近
 # print(dot(u[:, :3] * s, vh))
 # print(dot(u, dot(m_sigma, vh)))
 

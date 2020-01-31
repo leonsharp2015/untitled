@@ -213,11 +213,11 @@ def imgCompress(numSV=3, thresh=0.8):
 #        [ -1.,   6.,  -9.],
 #        [ -4., -10.,   2.]]
 
-data1=[[1,0,1],
-      [-1,-2,0],
-      [0,1,-1],
-      [0,2,1]]
-u, s, vh=linalg.svd(data1)#4*4,4*3,3*3
+# data1=[[1,0,1],
+#       [-1,-2,0],
+#       [0,1,-1],
+#       [0,2,1]]
+# u, s, vh=linalg.svd(data1)#4*4,4*3,3*3
 
 # d2=dot(u[:, :3]*s,vh) #4*3
 # print(u[:, :3])
@@ -242,12 +242,11 @@ u, s, vh=linalg.svd(data1)#4*4,4*3,3*3
 #     [0,11.07993065,0],
 #     [0,0,7.13719934],
 #     [0,0,0]])
-m_sigma=zeros((u.shape[1],s.shape[0]))
-m_sigma[:s.shape[0],:s.shape[0]]=diag(s)
-B=dot(dot(u,mat(m_sigma)),vh)
-print(B)
-
-t=allclose(data1, dot(u[:, :3] * s, vh)) #两个矩阵元素是否相近
+# m_sigma=zeros((u.shape[1],s.shape[0]))
+# m_sigma[:s.shape[0],:s.shape[0]]=diag(s)
+# B=dot(dot(u,mat(m_sigma)),vh)
+# print(B)
+# t=allclose(data1, dot(u[:, :3] * s, vh)) #两个矩阵元素是否相近
 # print(dot(u[:, :3] * s, vh))
 # print(dot(u, dot(m_sigma, vh)))
 
@@ -270,4 +269,18 @@ t=allclose(data1, dot(u[:, :3] * s, vh)) #两个矩阵元素是否相近
 # print(u1[:, :3]*s1) #每个元素分别相乘
 # print(dot(u1[:, :3]*s1,v1))#矩阵相乘
 
+
+A = mat([[1, 2, 3], [4, 5, 6]])
+U, Sigma, VT = linalg.svd(A)
+print("U", U)
+print("Sigma", Sigma)
+print("VT", VT)
+Sigma[1] = 0  # 降维
+print("Sigma", Sigma)
+
+S = zeros((2, 3))
+S[:2, :2] = diag(Sigma)
+print('S:',S)
+print("A conv:", dot(dot(A.T, U), S))  # 原始数据转到低维A.T*U*S
+print("A':", dot(dot(U, S), VT)) # 恢复原始维度
 

@@ -60,14 +60,54 @@ data2=[[2,4,9],
       [1,3,12],
       [8,0,8],
       [3,2,5]]
-U,sigma,VT=linalg.svd(data2) #4*4,4*3,3*3
-#U2,sigma2,VT2=linalg.svd(mat(data2))
+# U2,sigma2,VT2=linalg.svd(data2)
+U,sigma,VT=linalg.svd(mat(data2))#4*4,4*3,3*3 U*U.T=E,VT*VT.T=E
 
 m_sigma=zeros((U.shape[1],sigma.shape[0]))#建立4*3的对角矩阵
 m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
 #检验
 A2=dot(dot(U,m_sigma),VT)
-t=allclose(data2, dot(U[:, :3] * sigma, VT)) #两个矩阵元素是否相近,U[:, :3] * sigma或者U2[:, :3] * diag(sigma2)
+
+#两个矩阵元素是否相近
+#只取U的3*3行,可以近似得到原矩阵
+t=allclose(data2, dot(dot(U[:, :3], diag(sigma)), VT)) #U2[:, :3] * sigma2或者U[:, :3] * diag(sigma)
+#取U的4*4行 dot(dot(U, m_sigma), VT)
+
+#选取不同的奇异值，重构矩阵
+dim=2
+dim_sig = mat(eye(dim) * sigma[:dim])
+redata = U[:,:dim] * dim_sig * VT[:dim,:]
+
+mat1=mat(data2)
+xformedItems = mat1.T * U[:, :dim] * dim_sig.I #？？？？数据集降维
+
+
+# X_svd = dot(U, m_sigma)
+# print(X_svd)
+
+#pca降维
+data3=[[-1,-1,0,2,0],
+       [-2,0,0,1,1]]
+mat3=mat(data3)
+A=0.2*mat3*mat3.T
+eigVals,w =linalg.eig(A)#w按列存储特征向量(e1,e2,e3,...)
+p=w.T #p为特征向量按行排列的矩阵
+# print(p*A*p.T)
+y=p[:1,:]*mat3 #px降维
+print(y)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

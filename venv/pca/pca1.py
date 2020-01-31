@@ -14,8 +14,8 @@ def pca(dataMat, topNfeat=9999999):
     eigValInd = argsort(eigVals)            #sort, sort goes smallest to largest
     eigValInd = eigValInd[:-(topNfeat+1):-1]  #cut off unwanted dimensions
     redEigVects = eigVects[:,eigValInd]       #reorganize eig vects largest to smallest
-    lowDDataMat = meanRemoved * redEigVects #降维，数据的新坐标 transform data into new dimensions
-    reconMat = (lowDDataMat * redEigVects.T) + meanVals #将降维的数据新坐标，转为原坐标
+    lowDDataMat = meanRemoved * redEigVects #降维，转向新空间,行数不变，列按参数减少.数据的新坐标 transform data into new dimensions
+    reconMat = (lowDDataMat * redEigVects.T) + meanVals #再转回旧空间,将降维的数据新坐标，转为原坐标
     return lowDDataMat, reconMat
 
 dataMat=loadDataSet() #1000*2

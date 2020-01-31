@@ -242,7 +242,7 @@
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
       <workItem from="1576850416767" duration="138909000" />
-      <workItem from="1578738003317" duration="165900000" />
+      <workItem from="1578738003317" duration="168847000" />
     </task>
     <servers />
   </component>
@@ -291,22 +291,22 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1580472092586">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1580484769615">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580472092586" />
-    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1580472092585">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580484769615" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1580484769614">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1580472092585" />
-    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1580472092585">
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1580484769614" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1580484769614">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1580472092585" />
-    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1580472092586">
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1580484769614" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1580484769615">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1580472092586" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1580484769615" />
     <state width="1238" height="232" key="GridCell.Tab.1.bottom" timestamp="1580200286020">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -349,7 +349,7 @@
     <SUITE FILE_PATH="coverage/untitled$pca1.coverage" NAME="pca1 Coverage Results" MODIFIED="1580121891085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
     <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1577028784928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$logistic1.coverage" NAME="logistic1 Coverage Results" MODIFIED="1578738470661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/logistic" />
-    <SUITE FILE_PATH="coverage/untitled$svd2.coverage" NAME="svd2 Coverage Results" MODIFIED="1580472050069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
+    <SUITE FILE_PATH="coverage/untitled$svd2.coverage" NAME="svd2 Coverage Results" MODIFIED="1580484769609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
     <SUITE FILE_PATH="coverage/untitled$kNN03.coverage" NAME="kNN03 Coverage Results" MODIFIED="1577543410505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$growth1.coverage" NAME="growth1 Coverage Results" MODIFIED="1580047359438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/fpGrowth" />
     <SUITE FILE_PATH="coverage/untitled$kNN02.coverage" NAME="kNN02 Coverage Results" MODIFIED="1577285845046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />

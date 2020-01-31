@@ -86,19 +86,28 @@ xformedItems = mat1.T * U[:, :dim] * dim_sig.I #？？？？数据集降维
 # print(X_svd)
 
 #pca降维
-data3=[[-1,-1,0,2,0],
-       [-2,0,0,1,1]]
-mat3=mat(data3)
-A=0.2*mat3*mat3.T #协方差矩阵
-eigVals,w =linalg.eig(A)#w按列存储特征向量(e1,e2,e3,...)
-p=w.T #p为特征向量按行排列的矩阵
-# print(p*A*p.T) #p*A*p.T为对角矩阵，值为特征值
-y=p[:1,:]*mat3 #px降维
-print(y)
+#5条2维数据，要写成2*5矩阵
+X=[[-1,-1,0,2,0],
+    [-2,0,0,1,1]]
+X=mat(X)
+C=0.2*X*X.T #协方差矩阵
+eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
+p=w.T #p为特征向量按行排列的矩阵.一组基按行组成
+# print(p*C*p.T) #p*A*p.T为对角矩阵，值为特征值2,4
+y=p[:1,:]*X #px降维.k个基乘以X就是X由N维降为k维
+print('y1:',y)
 
-
-
-
+#也可以
+X2=[[-1,-2],
+    [-1,0],
+    [0,0],
+    [2,1],
+    [0,1]]
+X=mat(X2)
+C=0.2*X.T*X#协方差矩阵
+eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
+y=X*w[:,0]
+print('y2:',y)
 
 
 

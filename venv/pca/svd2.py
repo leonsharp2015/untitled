@@ -55,47 +55,28 @@ from numpy import linalg as la
 # sigma=diag(eigVals) #特征值转为矩阵 sigma=mat(eye(3)*eigVals[:3])
 # A2=w*sigma*w.I #任何方阵可以分解为n个特征向量所张成的n×n维矩阵、Σ为这n个特征值为主对角线的n×n维矩阵、I为矩阵的逆
 
-#矩阵的svd分解
-
+#矩阵的svd分解:A
 data2=[[2,4,9],
       [1,3,12],
       [8,0,8],
       [3,2,5]]
-mat1=mat(data2)#4*3
-# U,sigma,VT=linalg.svd(data2) #4*4,4*3,3*3
 U,sigma,VT=linalg.svd(data2) #4*4,4*3,3*3
-U2,sigma2,VT2=linalg.svd(mat(data2))
+#U2,sigma2,VT2=linalg.svd(mat(data2))
 
-m_sigma=zeros((U.shape[1],sigma.shape[0]))
+m_sigma=zeros((U.shape[1],sigma.shape[0]))#建立4*3的对角矩阵
 m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
-result=dot(dot(U,m_sigma),VT)
-# print(result)
-
-#ok
-# U[:, :3] * sigma
-# U2[:, :3] * diag(sigma2)
+#检验
+A2=dot(dot(U,m_sigma),VT)
+t=allclose(data2, dot(U[:, :3] * sigma, VT)) #两个矩阵元素是否相近,U[:, :3] * sigma或者U2[:, :3] * diag(sigma2)
 
 
-# t=allclose(data2, dot(U[:, :3] * sigma, VT)) #两个矩阵元素是否相近
-# print(dot(U[:, :3] * diag(sigma),VT))
-# print(dot(U[:, :4] * m_sigma,VT))
 
 
-#ok
-# m_sigma=zeros((4,3))
-# m_sigma[:3, :3] = diag(s)
-# B=dot(dot(u,mat(m_sigma)),vh.T)
 
 
-# u1=array([  [-1,0,-0.1,1],
-#             [ 0.4,0.1,0.7,1],
-#             [-0.5,0.1,0.5,1],
-#             [ 0.4,0.7,0.1,1]])
-# s1=array([10,5,6])
-# v1=array([
-#             [ 0.3,-0.7, 0.5],
-#             [-0.7,-0.5,-0.3],
-#             [0.5,-0.3,-0.7]
-#         ])
-# print(u1[:, :3]*s1) #每个元素分别相乘
-# print(dot(u1[:, :3]*s1,v1))#矩阵相乘
+
+
+
+
+
+

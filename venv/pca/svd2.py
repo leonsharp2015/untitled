@@ -89,12 +89,16 @@ xformedItems = mat1.T * U[:, :dim] * dim_sig.I #？？？？数据集降维
 data3=[[-1,-1,0,2,0],
        [-2,0,0,1,1]]
 mat3=mat(data3)
-A=0.2*mat3*mat3.T
+A=0.2*mat3*mat3.T #协方差矩阵
 eigVals,w =linalg.eig(A)#w按列存储特征向量(e1,e2,e3,...)
 p=w.T #p为特征向量按行排列的矩阵
-# print(p*A*p.T)
+# print(p*A*p.T) #p*A*p.T为对角矩阵，值为特征值
 y=p[:1,:]*mat3 #px降维
 print(y)
+
+
+
+
 
 
 

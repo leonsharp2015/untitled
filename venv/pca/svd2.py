@@ -75,7 +75,7 @@ from numpy import linalg as la
 #     [0,1]]
 # X=mat(X2)
 # C=0.2*X.T*X#协方差矩阵
-# eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
+# eigVals,w =linalg.eig(C)# w按列存储协方差矩阵的特征向量(e1,e2,e3,...)
 # y=X*w[:,0] #X*e1
 # print('y2:',y)
 
@@ -110,14 +110,14 @@ xformedItems = mat1.T * U[:, :dim] * dim_sig.I
 # X_svd = dot(U, m_sigma)
 # print(X_svd)
 
-A = mat([[1, 2, 3], [4, 5, 6]])#2*3
+A = mat([[1, 2, 3],
+         [4, 5, 6]])#2*3
 U, Sigma, VT = linalg.svd(A)#2*2,2*3,3*3
 Sigma[1] = 0  #降维
 S = zeros((2, 3))
 S[:2, :2] = diag(Sigma)
 lowdata=dot(dot(A.T, U), S) #原始数据转到低维A.T*U*S
-
-
+print(lowdata)
 
 
 

@@ -46,7 +46,7 @@ def svdEst(dataMat, user, simMeas, item):#svd矩阵分解
     simTotal = 0.0; ratSimTotal = 0.0
     U,Sigma,VT = la.svd(dataMat)
     Sig4 = mat(eye(4)*Sigma[:4]) #对角矩阵 arrange Sig4 into a diagonal matrix
-    xformedItems = dataMat.T * U[:,:4] * Sig4.I  #构造为低维矩阵。包含大多数原矩阵的量。create transformed items
+    xformedItems = dataMat.T * U[:,:4] * Sig4.I  #构造为低维矩阵。包含大多数原矩阵的量。create transformed items  ？？xformedItems = dataMat.T * U[:, :4]
     for j in range(n):
         userRating = dataMat[user,j]
         if userRating == 0 or j==item: continue

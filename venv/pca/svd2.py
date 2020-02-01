@@ -55,7 +55,32 @@ from numpy import linalg as la
 # sigma=diag(eigVals) #特征值转为矩阵 sigma=mat(eye(3)*eigVals[:3])
 # A2=w*sigma*w.I #任何方阵可以分解为n个特征向量所张成的n×n维矩阵、Σ为这n个特征值为主对角线的n×n维矩阵、I为矩阵的逆
 
-#矩阵的svd分解:A
+#pca降维
+#5条2维数据，要写成2*5矩阵
+# X=[[-1,-1,0,2,0],
+#     [-2,0,0,1,1]]
+# X=mat(X)
+# C=0.2*X*X.T #协方差矩阵
+# eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
+# p=w.T #p为特征向量按行排列的矩阵.一组基按行组成
+# # print(p*C*p.T) #p*A*p.T为对角矩阵，值为特征值2,4
+# y=p[:1,:]*X #px降维.k个基乘以X就是X由N维降为k维
+# print('y1:',y)
+#
+# #也可以
+# X2=[[-1,-2],
+#     [-1,0],
+#     [0,0],
+#     [2,1],
+#     [0,1]]
+# X=mat(X2)
+# C=0.2*X.T*X#协方差矩阵
+# eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
+# y=X*w[:,0] #X*e1
+# print('y2:',y)
+
+
+#矩阵的svd分解
 data2=[[2,4,9],
       [1,3,12],
       [8,0,8],
@@ -78,36 +103,29 @@ dim=2
 dim_sig = mat(eye(dim) * sigma[:dim])
 redata = U[:,:dim] * dim_sig * VT[:dim,:]
 
+#？？？？数据集降维
 mat1=mat(data2)
-xformedItems = mat1.T * U[:, :dim] * dim_sig.I #？？？？数据集降维
-
+xformedItems = mat1.T * U[:, :dim] * dim_sig.I
 
 # X_svd = dot(U, m_sigma)
 # print(X_svd)
 
-#pca降维
-#5条2维数据，要写成2*5矩阵
-X=[[-1,-1,0,2,0],
-    [-2,0,0,1,1]]
-X=mat(X)
-C=0.2*X*X.T #协方差矩阵
-eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
-p=w.T #p为特征向量按行排列的矩阵.一组基按行组成
-# print(p*C*p.T) #p*A*p.T为对角矩阵，值为特征值2,4
-y=p[:1,:]*X #px降维.k个基乘以X就是X由N维降为k维
-print('y1:',y)
+A = mat([[1, 2, 3], [4, 5, 6]])#2*3
+U, Sigma, VT = linalg.svd(A)#2*2,2*3,3*3
+Sigma[1] = 0  #降维
+S = zeros((2, 3))
+S[:2, :2] = diag(Sigma)
+lowdata=dot(dot(A.T, U), S) #原始数据转到低维A.T*U*S
 
-#也可以
-X2=[[-1,-2],
-    [-1,0],
-    [0,0],
-    [2,1],
-    [0,1]]
-X=mat(X2)
-C=0.2*X.T*X#协方差矩阵
-eigVals,w =linalg.eig(C)# w按列存储特征向量(e1,e2,e3,...)
-y=X*w[:,0]
-print('y2:',y)
+
+
+
+
+
+
+
+
+
 
 
 

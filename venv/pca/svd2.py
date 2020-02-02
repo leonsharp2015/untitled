@@ -55,7 +55,7 @@ from numpy import linalg as la
 # sigma=diag(eigVals) #特征值转为矩阵 sigma=mat(eye(3)*eigVals[:3])
 # A2=w*sigma*w.I #任何方阵可以分解为n个特征向量所张成的n×n维矩阵、Σ为这n个特征值为主对角线的n×n维矩阵、I为矩阵的逆
 
-#pca降维
+#edv降维pca
 #5条2维数据，要写成2*5矩阵
 # X=[[-1,-1,0,2,0],
 #     [-2,0,0,1,1]]
@@ -81,45 +81,61 @@ from numpy import linalg as la
 
 
 #矩阵的svd分解
-data2=[[2,4,9],
-      [1,3,12],
-      [8,0,8],
-      [3,2,5]]
-# U2,sigma2,VT2=linalg.svd(data2)
-U,sigma,VT=linalg.svd(mat(data2))#4*4,4*3,3*3 U*U.T=E,VT*VT.T=E
+# data2=[[2,4,9],
+#       [1,3,12],
+#       [8,0,8],
+#       [3,2,5]]
+# # U2,sigma2,VT2=linalg.svd(data2)
+# U,sigma,VT=linalg.svd(mat(data2))#4*4,4*3,3*3 U*U.T=E,VT*VT.T=E
+#
+# m_sigma=zeros((U.shape[1],sigma.shape[0]))#建立4*3的对角矩阵
+# m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
+# #检验
+# A2=dot(dot(U,m_sigma),VT)
+#
+# #两个矩阵元素是否相近
+# #只取U的3*3行,可以近似得到原矩阵
+# t=allclose(data2, dot(dot(U[:, :3], diag(sigma)), VT)) #U2[:, :3] * sigma2或者U[:, :3] * diag(sigma)
+# #取U的4*4行 dot(dot(U, m_sigma), VT)
+#
+# #选取不同的奇异值，重构矩阵
+# dim=2
+# dim_sig = mat(eye(dim) * sigma[:dim])
+# redata = U[:,:dim] * dim_sig * VT[:dim,:]
 
-m_sigma=zeros((U.shape[1],sigma.shape[0]))#建立4*3的对角矩阵
-m_sigma[:sigma.shape[0],:sigma.shape[0]]=diag(sigma)
-#检验
-A2=dot(dot(U,m_sigma),VT)
+#svd的降维pca
+A=mat([[5,5,0,5],
+      [5,0,3,4],
+      [3,4,0,3],
+      [0,0,5,3],
+      [5,4,4,5],
+      [5,4,5,5]]) #6*4
+U,Sigma,V=linalg.svd(A) #6*6,6*4,4*4
+#减少U、sigma的维度
+U=U[:,:2] #6*2
+S=zeros((2,2))
+S = mat(eye(2) * Sigma[:2])#2*2
+V=V[0:2,:] #2*4
 
-#两个矩阵元素是否相近
-#只取U的3*3行,可以近似得到原矩阵
-t=allclose(data2, dot(dot(U[:, :3], diag(sigma)), VT)) #U2[:, :3] * sigma2或者U[:, :3] * diag(sigma)
-#取U的4*4行 dot(dot(U, m_sigma), VT)
+low_rows=U.T*A #X=U*S*VT 得到UT*X=S*VT,即对A进行行压缩
+low_col=A*V.T #即对A进行列压缩
+lowA=A.T*U*S.I #由A=U*S*VT,得到V=AT*U*S.I,其中S.I.T＝S.I。也就是V表示将A压缩以后的矩阵
+#可对A的新向量a1做降维
+a1=mat([[5],[5],[0],[0],[0],[5]])
+a1_lowdata=a1.T*U*S.I
 
-#选取不同的奇异值，重构矩阵
-dim=2
-dim_sig = mat(eye(dim) * sigma[:dim])
-redata = U[:,:dim] * dim_sig * VT[:dim,:]
-
-#？？？？数据集降维
-mat1=mat(data2)
-xformedItems = mat1.T * U[:, :dim] * dim_sig.I
-
-# X_svd = dot(U, m_sigma)
-# print(X_svd)
-
-A = mat([[1, 2, 3],
-         [4, 5, 6]])#2*3
-U, Sigma, VT = linalg.svd(A)#2*2,2*3,3*3
-Sigma[1] = 0  #降维
-S = zeros((2, 3))
-S[:2, :2] = diag(Sigma)
-lowdata=dot(dot(A.T, U), S) #原始数据转到低维A.T*U*S
-print(lowdata)
-
-
+#也可以对A的列进行压缩，先进行变型
+#-----对A的列压缩:A:6*4压缩成6*2
+#对A转置为B，然后通过U.T*B得到B的行压缩，也就是A的列压缩
+B=A.T #4*6
+U,Sigma,V=linalg.svd(B) #4*4,4*6,6*6
+#减少U、sigma的维度
+U=U[:,:2] #4*2
+S=zeros((2,2))
+S = mat(eye(2) * Sigma[:2])#2*2
+V=V[0:2,:] #2*6
+low_row=U.T*B #对B进行行压缩.但是由于B是A的转置，所以也就是通过U对A进行了列压缩
+low_col=B*V.T #对B进行列压缩
 
 
 

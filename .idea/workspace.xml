@@ -4,6 +4,7 @@
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/pca/svd1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pca/svd1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pca/svd2.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pca/svd2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <recent name="$PROJECT_DIR$/venv/cart" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.svd1">
+  <component name="RunManager" selected="Python.svd2">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,8 +208,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.svd1" />
         <item itemvalue="Python.svd2" />
+        <item itemvalue="Python.svd1" />
         <item itemvalue="Python.pca1" />
         <item itemvalue="Python.growth1" />
         <item itemvalue="Python.apriori1" />
@@ -242,7 +243,7 @@
       <workItem from="1576421209090" duration="1063000" />
       <workItem from="1576772769003" duration="214000" />
       <workItem from="1576850416767" duration="138909000" />
-      <workItem from="1578738003317" duration="180312000" />
+      <workItem from="1578738003317" duration="181007000" />
     </task>
     <servers />
   </component>
@@ -291,22 +292,22 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1580612672894">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1580616257971">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580612672894" />
-    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1580612672893">
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1580616257971" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1580616257970">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1580612672893" />
-    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1580612672892">
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1580616257970" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1580616257969">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1580612672892" />
-    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1580612672893">
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1580616257969" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1580616257971">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1580612672893" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1580616257971" />
     <state width="1238" height="232" key="GridCell.Tab.1.bottom" timestamp="1580200286020">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -349,7 +350,7 @@
     <SUITE FILE_PATH="coverage/untitled$pca1.coverage" NAME="pca1 Coverage Results" MODIFIED="1580121891085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
     <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1577028784928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$logistic1.coverage" NAME="logistic1 Coverage Results" MODIFIED="1578738470661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/logistic" />
-    <SUITE FILE_PATH="coverage/untitled$svd2.coverage" NAME="svd2 Coverage Results" MODIFIED="1580527182465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
+    <SUITE FILE_PATH="coverage/untitled$svd2.coverage" NAME="svd2 Coverage Results" MODIFIED="1580616254788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
     <SUITE FILE_PATH="coverage/untitled$kNN03.coverage" NAME="kNN03 Coverage Results" MODIFIED="1577543410505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/untitled$growth1.coverage" NAME="growth1 Coverage Results" MODIFIED="1580047359438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/fpGrowth" />
     <SUITE FILE_PATH="coverage/untitled$kNN02.coverage" NAME="kNN02 Coverage Results" MODIFIED="1577285845046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
@@ -360,7 +361,7 @@
     <SUITE FILE_PATH="coverage/untitled$shanonEnd.coverage" NAME="shanonEnd Coverage Results" MODIFIED="1577979750533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/tree" />
     <SUITE FILE_PATH="coverage/untitled$apriori1.coverage" NAME="apriori1 Coverage Results" MODIFIED="1579751404559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/apriori" />
     <SUITE FILE_PATH="coverage/untitled$kNN.coverage" NAME="kNN1 Coverage Results" MODIFIED="1577194944558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/untitled$svd1.coverage" NAME="svd1 Coverage Results" MODIFIED="1580612672867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
+    <SUITE FILE_PATH="coverage/untitled$svd1.coverage" NAME="svd1 Coverage Results" MODIFIED="1580614461529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/pca" />
     <SUITE FILE_PATH="coverage/untitled$bayes.coverage" NAME="bayes1 Coverage Results" MODIFIED="1578493564018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/bayes" />
     <SUITE FILE_PATH="coverage/untitled$kmean1.coverage" NAME="kmean1 Coverage Results" MODIFIED="1579599463556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/kmeans" />
   </component>

@@ -299,6 +299,7 @@ S = mat(eye(2) * Sigma[:2])#2*2
 V=V[0:2,:] #2*4
 
 low_rows=U.T*A #X=U*S*VT 得到UT*X=S*VT,即对A进行行压缩
+low_col=A*V.T #即对A进行列压缩
 lowA=A.T*U*S.I #由A=U*S*VT,得到V=AT*U*S.I,其中S.I.T＝S.I。也就是V表示将A压缩以后的矩阵
 #对a1
 a1=mat([[5],[5],[0],[0],[0],[5]])

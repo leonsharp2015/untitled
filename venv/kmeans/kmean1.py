@@ -96,10 +96,10 @@ def biKmeans(dataSet, k, distMeas=distEclud):
 
 
 
-# dataMat=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch10/testSet.txt')
-# init_centroids=randCent(dataMat,4) #4*2的簇
-# centroids, clusterAssment=kMeans(dataMat,4) #4*2
-# print(centroids)
+dataMat=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch10/testSet.txt')
+init_centroids=randCent(dataMat,4) #4*2的簇
+centroids, clusterAssment=kMeans(dataMat,4) #4*2
+print(centroids)
 
 
 dataMat=loadDataSet('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch10/testSet2.txt')

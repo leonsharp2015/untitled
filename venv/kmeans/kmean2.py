@@ -35,13 +35,25 @@ def kmeans2(dataSet,k):
                 min_distance=dis
                 centid_index=j
         dataAssment[i,:]=[min_distance,centid_index]
+
+    #0类
+    rows_index_0=nonzero(dataAssment[:,1:2]==0)[0]
+    data_0=dataSet[rows_index_0,:]
+    new_cent_x_0=sum(data_0[:,:1])/data_0.shape[0]
+    new_cent_y_0 = sum(data_0[:, 1:2]) / data_0.shape[0]
+    #1类
+    rows_index_1=nonzero(dataAssment[:,1:2]==1)[0]
+    data_1=dataSet[rows_index_1,:]
+    new_cent_x_1=sum(data_1[:,:1])/data_0.shape[0]
+    new_cent_y_1 = sum(data_1[:, 1:2]) / data_0.shape[0]
+
+
     return dataAssment
 
 
 datalist=loadData('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch10/testSet.txt')
 dataSet=mat(datalist)
 dataAssment=kmeans2(dataSet,2)
-
 
 
 

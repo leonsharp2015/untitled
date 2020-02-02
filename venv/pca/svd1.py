@@ -270,17 +270,42 @@ def imgCompress(numSV=3, thresh=0.8):
 # print(dot(u1[:, :3]*s1,v1))#矩阵相乘
 
 
-A = mat([[1, 2, 3], [4, 5, 6]])
-U, Sigma, VT = linalg.svd(A)
-print("U", U)
-print("Sigma", Sigma)
-print("VT", VT)
-Sigma[1] = 0  # 降维
-print("Sigma", Sigma)
+# A = mat([[1, 2, 3], [4, 5, 6]])
+# U, Sigma, VT = linalg.svd(A)
+# print("U", U)
+# print("Sigma", Sigma)
+# print("VT", VT)
+# Sigma[1] = 0  # 降维
+# print("Sigma", Sigma)
+#
+# S = zeros((2, 3))
+# S[:2, :2] = diag(Sigma)
+# print('S:',S)
+# print("A conv:", dot(dot(A.T, U), S))  # 原始数据转到低维A.T*U*S
+# print("A':", dot(dot(U, S), VT)) # 恢复原始维度
 
-S = zeros((2, 3))
-S[:2, :2] = diag(Sigma)
-print('S:',S)
-print("A conv:", dot(dot(A.T, U), S))  # 原始数据转到低维A.T*U*S
-print("A':", dot(dot(U, S), VT)) # 恢复原始维度
+
+A=mat([[5,5,0,5],
+      [5,0,3,4],
+      [3,4,0,3],
+      [0,0,5,3],
+      [5,4,4,5],
+      [5,4,5,5]]) #6*4
+U,Sigma,V=linalg.svd(A) #6*6,6*4,4*4
+
+U=U[:,:2] #6*2
+S=zeros((2,2))
+S = mat(eye(2) * Sigma[:2])#2*2
+V=V[0:2,:] #2*4
+
+low_rows=U.T*A #X=U*S*VT 得到UT*X=S*VT,即对A进行行压缩
+lowA=A.T*U*S.I #由A=U*S*VT,得到V=AT*U*S.I,其中S.I.T＝S.I。也就是V表示将A压缩以后的矩阵
+#对a1
+a1=mat([[5],[5],[0],[0],[0],[5]])
+a1_lowdata=a1.T*U*S.I
+
+
+
+
+
 

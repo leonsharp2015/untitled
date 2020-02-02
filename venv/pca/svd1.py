@@ -305,7 +305,17 @@ a1=mat([[5],[5],[0],[0],[0],[5]])
 a1_lowdata=a1.T*U*S.I
 
 
-
-
+#-----对A的列压缩:A:6*4压缩成6*2
+#对A转置为B，然后通过U.T*B得到B的行压缩，也就是A的列压缩
+B=A.T #4*6
+U,Sigma,V=linalg.svd(B) #4*4,4*6,6*6
+#减少U、sigma的维度
+U=U[:,:2] #4*2
+S=zeros((2,2))
+S = mat(eye(2) * Sigma[:2])#2*2
+V=V[0:2,:] #2*6
+low_row=U.T*B #对B进行行压缩.但是由于B是A的转置，所以也就是通过U对A进行了列压缩
+low_col=B*V.T #对B进行列压缩
+print(low_row)
 
 

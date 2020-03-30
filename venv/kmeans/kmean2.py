@@ -39,7 +39,7 @@ def kmeans2(dataSet,k):
                     centid_index=j
             if dataAssment[i, 1:2]!=centid_index:
                 loop=True
-            dataAssment[i,:]=[min_distance,centid_index]
+            dataAssment[i,:]=[min_distance,centid_index] #i表示行索引，centid_index表示所属类别
 
         # #0类
         # rows_index_0=nonzero(dataAssment[:,1:2]==0)[0]
@@ -62,5 +62,4 @@ def kmeans2(dataSet,k):
 datalist=loadData('/Users/zhanglei/机器学习与算法/机器学习实战源代码/machinelearninginaction/Ch10/testSet.txt')
 dataSet=mat(datalist)
 dataAssment=kmeans2(dataSet,4)
-
-
+print(dataAssment)

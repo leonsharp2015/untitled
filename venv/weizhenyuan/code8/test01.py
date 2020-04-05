@@ -5,16 +5,7 @@ from numpy import set_printoptions
 from numpy import mat
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-
-filename='pima_data.csv'
-names=['preg','plas','pres','skin','test','mass','pedi','age','class']
-data=read_csv(filename,names=names)
-arrays=data.values
-X=arrays[:,0:8]
-Y=arrays[:,8]
-transformer=MinMaxScaler(feature_range=(0,1))
-newX=transformer.fit_transform(X)
-set_printoptions(precision=3)#小数3位
+from sklearn.preprocessing import Normalizer
 
 #list->ndarray->dataframe
 # list1=[[1,2,3],[4,5,6],[7,8,10]]
@@ -43,16 +34,29 @@ set_printoptions(precision=3)#小数3位
 # ax.set_xticklabels(labels=['result1','result2','result3']) #x轴的名称，位置必须boxplot之后
 # plt.show()
 
+# result_list1=[[1,2,3],[4,5,6],[7,8,10]]
+# fig=plt.figure()
+# fig.suptitle('aa')
+# ax=fig.add_subplot(111)#“111”表示“1×1网格，第一子图”，“234”表示“2×3网格，第四子图”。
+# plt.boxplot(result_list1)
+# ax.set_xticklabels(labels=['result1','result2','result3']) #x轴的名称，位置必须boxplot之后
+# plt.show()
 
-result_list1=[[1,2,3],[4,5,6],[7,8,10]]
+filename='pima_data.csv'
+names=['preg','plas','pres','skin','test','mass','pedi','age','class']
+data=read_csv(filename,names=names)
+arrays=data.values
+X=arrays[:,0:8]
+Y=arrays[:,8]
+#transformer=MinMaxScaler(feature_range=(0,1))
+transformer=Normalizer().fit(X)
+newX=transformer.fit_transform(X)
+set_printoptions(precision=3)#小数3位
 fig=plt.figure()
-fig.suptitle('aa')
-ax=fig.add_subplot(111)#“111”表示“1×1网格，第一子图”，“234”表示“2×3网格，第四子图”。
-plt.boxplot(result_list1)
-ax.set_xticklabels(labels=['result1','result2','result3']) #x轴的名称，位置必须boxplot之后
+ax=fig.add_subplot(111)#图只有1行1列
+plt.boxplot(newX)
+ax.set_xticklabels(labels=names[0:8])
 plt.show()
-
-
 
 
 

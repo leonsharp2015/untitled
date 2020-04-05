@@ -23,7 +23,7 @@ dataset=read_csv(fileName,names=names)
 # pyplot.show()
 # dataset.hist()
 # pyplot.show()
-# scatter_matrix(dataset)
+# scatter_matrix(dataset) #关系矩阵
 # pyplot.show()
 array=dataset.values
 X=array[:,0:4]
@@ -43,14 +43,26 @@ for key in models:
     #每个cv_result包含10个结果
     cv_result=cross_val_score(models[key],X_train,Y_train,cv=kfold,scoring='accuracy')
     results.append(cv_result)
-    print('%s:%f (%f)'%(key,cv_result.mean(),cv_result.std()))
+    #print('%s:%f (%f)'%(key,cv_result.mean(),cv_result.std()))
 
+print(results)
 fig=pyplot.figure()
 fig.suptitle('aa')
 ax=fig.add_subplot(111)#“111”表示“1×1网格，第一子图”，“234”表示“2×3网格，第四子图”。
 pyplot.boxplot(results)
-ax.set_xticklabels(models.keys())
+ax.set_xticklabels(models.keys()) #x轴的名称，位置必须boxplot之后
 pyplot.show()
+
+#仅使用SVM
+svm=SVC()
+svm.fit(X=X_train,y=Y_train)
+predictions=svm.predict(X_test)
+print(accuracy_score(Y_test,predictions))
+print(confusion_matrix(Y_test,predictions))
+print(classification_report(Y_test,predictions))
+
+
+
 
 # X=np.arange(24).reshape(12,2)#[0-24]变成12行2列
 # y=np.random.choice([1,2],12,p=[0.4,0.6]) #1或2，共12个，1出现概率0.4

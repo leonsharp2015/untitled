@@ -1,6 +1,7 @@
 from pandas import read_csv
 import numpy as np
 import pandas as pd
+from matplotlib import pyplot
 from sklearn.model_selection import KFold
 from sklearn.model_selection import LeaveOneOut
 from sklearn.model_selection import ShuffleSplit
@@ -21,6 +22,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 
+
 filename='pima_data.csv'
 names=['preg','plas','pres','skin','test','mass','pedi','age','class']
 data=read_csv(filename,names=names)
@@ -28,37 +30,26 @@ arrays=data.values
 X=arrays[:,0:8]
 Y=arrays[:,8]
 kfold=KFold(n_splits=10,random_state=7)
+models={}
+models['LR']=LogisticRegression()
+models['LDA']=LinearDiscriminantAnalysis()
+models['KNN']=KNeighborsClassifier()
+models['CART']=DecisionTreeClassifier()
+models['SVM']=SVC()
+models['NB']=GaussianNB()
+results=[]
+for name in models:
+    r1=cross_val_score(models[name],X,Y,cv=kfold)
+    results.append(r1)
+    msg='%s:%.3f(%.3f)' % (name,r1.mean(),r1.std())
+    print(msg)
 
-#Logistic
-# model=LogisticRegression()
-# result=cross_val_score(model,X,Y,cv=kfold)
-# print(result.mean())
-
-#线性判别分析
-# model=LinearDiscriminantAnalysis()
-# result=cross_val_score(model,X,Y,cv=kfold)
-# print(result.mean())
-
-#k-means
-# model=KNeighborsClassifier()
-# result=cross_val_score(model,X,Y,cv=kfold)
-# print(result.mean())
-
-#bayes
-# model=GaussianNB()
-# result=cross_val_score(model,X,Y,cv=kfold)
-# print(result.mean())
-
-#decisionTree
-# model=DecisionTreeClassifier()
-# result=cross_val_score(model,X,Y,cv=kfold)
-# print(result.mean())
-
-#SVC
-model=SVC()
-result=cross_val_score(model,X,Y,cv=kfold)
-print(result.mean())
-
+fig=pyplot.figure()
+fig.suptitle('regress')
+ax=fig.add_subplot(111)
+pyplot.boxplot(results)
+ax.set_xticklabels(models.keys())
+pyplot.show()
 
 
 

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code12/c12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code12/pima_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code13/c13.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code13/housing.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code14/c14.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code14/pima_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/weizhenyuan/code12/c12.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/weizhenyuan/code12/c12.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/weizhenyuan/code12" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/weizhenyuan/code14" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -59,14 +62,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code14" />
+      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code13" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code12" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code11" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code10" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code9" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code8" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.c12">
+  <component name="RunManager" selected="Python.c14">
     <configuration name="R2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,28 +106,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="c10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code10" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code10/c10.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,7 +158,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="c13" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -185,12 +166,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code13" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code9/test03.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code13/c13.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="c14" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code14" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code14/c14.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -200,19 +203,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test03" />
-      <item itemvalue="Python.c10" />
       <item itemvalue="Python.c11" />
       <item itemvalue="Python.R2" />
       <item itemvalue="Python.c12" />
+      <item itemvalue="Python.c13" />
+      <item itemvalue="Python.c14" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.c14" />
+        <item itemvalue="Python.c13" />
         <item itemvalue="Python.c12" />
         <item itemvalue="Python.c11" />
         <item itemvalue="Python.R2" />
-        <item itemvalue="Python.c10" />
-        <item itemvalue="Python.test03" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586143880344</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="weizhenyuan">
+      <created>1586145893561</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586145893561</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,10 +309,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="452" y="143" width="704" height="589" key="#xdebugger.evaluate/0.23.1280.709@0.23.1280.709" timestamp="1580189693952" />
-    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586143880035">
+    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586145893212">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586143880035" />
+    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586145893212" />
     <state width="709" height="466" key="DebuggerActiveHint" timestamp="1580018384349">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -315,22 +325,22 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1259" height="254" key="GridCell.Tab.0.bottom" timestamp="1586145869008">
+    <state width="1259" height="254" key="GridCell.Tab.0.bottom" timestamp="1586159825140">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586145869008" />
-    <state width="1259" height="254" key="GridCell.Tab.0.center" timestamp="1586145869007">
+    <state width="1259" height="254" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586159825140" />
+    <state width="1259" height="254" key="GridCell.Tab.0.center" timestamp="1586159825139">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586145869007" />
-    <state width="1259" height="254" key="GridCell.Tab.0.left" timestamp="1586145869007">
+    <state width="1259" height="254" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586159825139" />
+    <state width="1259" height="254" key="GridCell.Tab.0.left" timestamp="1586159825139">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586145869007" />
-    <state width="1259" height="254" key="GridCell.Tab.0.right" timestamp="1586145869008">
+    <state width="1259" height="254" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586159825139" />
+    <state width="1259" height="254" key="GridCell.Tab.0.right" timestamp="1586159825140">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586145869008" />
+    <state width="1259" height="254" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586159825140" />
     <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586136238224">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -355,10 +365,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="149" y="23" width="982" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1581665162811" />
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1586143882870">
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1586145895095">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586143882870" />
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586145895095" />
     <state x="303" y="31" width="673" height="693" key="find.popup" timestamp="1580622655465">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

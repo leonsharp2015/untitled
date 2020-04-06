@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code9/pima_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code9/test03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code10/c10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code10/pima_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code11/c11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code11/housing.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/weizhenyuan/code11/pima_data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/weizhenyuan/code8/test01.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/weizhenyuan/code8/test01.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/weizhenyuan/code9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/weizhenyuan/code11" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -60,14 +62,36 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code11" />
+      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code10" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code9" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code8" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code4" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code2" />
-      <recent name="$PROJECT_DIR$/venv/pca" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test03">
+  <component name="RunManager" selected="Python.c11">
+    <configuration name="R2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code11" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code11/R2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kmean2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="c10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,12 +122,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/kmeans" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/kmeans/kmean2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code10/c10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="c11" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code11" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code11/c11.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,28 +180,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code4/test01.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,42 +202,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code2/test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.kmean2" />
-      <item itemvalue="Python.test1" />
-      <item itemvalue="Python.test01" />
       <item itemvalue="Python.test01 (1)" />
       <item itemvalue="Python.test03" />
+      <item itemvalue="Python.c10" />
+      <item itemvalue="Python.c11" />
+      <item itemvalue="Python.R2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.c11" />
+        <item itemvalue="Python.R2" />
+        <item itemvalue="Python.c10" />
         <item itemvalue="Python.test03" />
         <item itemvalue="Python.test01 (1)" />
-        <item itemvalue="Python.test1" />
-        <item itemvalue="Python.test01" />
-        <item itemvalue="Python.kmean2" />
       </list>
     </recent_temporary>
   </component>
@@ -300,38 +302,38 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1259" height="254" key="GridCell.Tab.0.bottom" timestamp="1586101453722">
+    <state width="1259" height="254" key="GridCell.Tab.0.bottom" timestamp="1586143389880">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586101453722" />
-    <state width="1259" height="254" key="GridCell.Tab.0.center" timestamp="1586101453721">
+    <state width="1259" height="254" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586143389880" />
+    <state width="1259" height="254" key="GridCell.Tab.0.center" timestamp="1586143389879">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586101453721" />
-    <state width="1259" height="254" key="GridCell.Tab.0.left" timestamp="1586101453720">
+    <state width="1259" height="254" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586143389879" />
+    <state width="1259" height="254" key="GridCell.Tab.0.left" timestamp="1586143389879">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586101453720" />
-    <state width="1259" height="254" key="GridCell.Tab.0.right" timestamp="1586101453721">
+    <state width="1259" height="254" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586143389879" />
+    <state width="1259" height="254" key="GridCell.Tab.0.right" timestamp="1586143389879">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="254" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586101453721" />
-    <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586079487747">
+    <state width="1259" height="254" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586143389879" />
+    <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586136238224">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586079487747" />
-    <state width="1259" height="232" key="GridCell.Tab.1.center" timestamp="1586079487745">
+    <state width="1259" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586136238224" />
+    <state width="1259" height="232" key="GridCell.Tab.1.center" timestamp="1586136238223">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1586079487745" />
-    <state width="1259" height="232" key="GridCell.Tab.1.left" timestamp="1586079487745">
+    <state width="1259" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1586136238223" />
+    <state width="1259" height="232" key="GridCell.Tab.1.left" timestamp="1586136238222">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1586079487745" />
-    <state width="1259" height="232" key="GridCell.Tab.1.right" timestamp="1586079487746">
+    <state width="1259" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1586136238222" />
+    <state width="1259" height="232" key="GridCell.Tab.1.right" timestamp="1586136238223">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1586079487746" />
+    <state width="1259" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1586136238223" />
     <state x="434" y="95" key="RollbackChangesDialog" timestamp="1580352330230">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

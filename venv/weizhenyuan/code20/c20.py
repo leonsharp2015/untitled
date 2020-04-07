@@ -27,6 +27,7 @@ from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.tree import ExtraTreeRegressor
 from sklearn.svm import SVR
 
 from sklearn.ensemble import BaggingRegressor
@@ -120,21 +121,42 @@ results=[]
 # ax.set_xticklabels(pipelines.keys())
 # pyplot.show()
 
-#调参数改变knn
-scaler=StandardScaler().fit(X_train)
-rescaledX=scaler.transform(X_train)
-para_grid={'n_neighbors':[1,3,5,7,9,11,13,15,17,19,21]}
-model=KNeighborsRegressor()
-kfold=KFold(n_splits=10,random_state=7,shuffle=True)
-grid=GridSearchCV(estimator=model,param_grid=para_grid, scoring='neg_mean_squared_error',cv=kfold)
-grid_result=grid.fit(X=rescaledX,y=Y_train)
-print('最优：%s 使用%s' % (grid_result.best_score_,grid_result.best_params_))
-cv_result=zip(grid_result.cv_results_['mean_test_score'],
-              grid_result.cv_results_['std_test_score'],
-              grid_result.cv_results_['params'])
+#调参数改变knn,最好为3，-21.616286492374726，14.059167
+# scaler=StandardScaler().fit(X_train)
+# rescaledX=scaler.transform(X_train)
+# para_grid={'n_neighbors':[1,3,5,7,9,11,13,15,17,19,21]}
+# model=KNeighborsRegressor()
+# kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+# grid=GridSearchCV(estimator=model,param_grid=para_grid, scoring='neg_mean_squared_error',cv=kfold)
+# grid_result=grid.fit(X=rescaledX,y=Y_train)
+# print('最优：%s 使用%s' % (grid_result.best_score_,grid_result.best_params_))
+# cv_result=zip(grid_result.cv_results_['mean_test_score'],
+#               grid_result.cv_results_['std_test_score'],
+#               grid_result.cv_results_['params'])
+#
+# for mean,std,param in cv_result:
+#     print('%f (%f) with %r' % (mean,std,param))
 
-for mean,std,param in cv_result:
-    print('%f (%f) with %r' % (mean,std,param))
+#集成算法:GBR -8.825455 (3.633479),RFR -11.320035 (5.937915)
+# ensembles={}
+# ensembles['ScaledAB']=Pipeline([('Scaler',StandardScaler()),('AB',AdaBoostRegressor())])
+# ensembles['ScaledAB-KNN']=Pipeline([('Scaler',StandardScaler()),('ABKNN',AdaBoostRegressor(base_estimator=KNeighborsRegressor(n_neighbors=3)))])
+# ensembles['ScaledAB-LR']=Pipeline([('Scaler',StandardScaler()),('ABLR',AdaBoostRegressor(LinearRegression()))])
+# ensembles['ScaledRFR']=Pipeline([('Scaler',StandardScaler()),('RFR',RandomForestRegressor())])
+# ensembles['ScaledETR']=Pipeline([('Scaler',StandardScaler()),('ETR',ExtraTreeRegressor())])
+# ensembles['ScaledGBR']=Pipeline([('Scaler',StandardScaler()),('GBR',GradientBoostingRegressor())])
+# for key in ensembles:
+#     kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+#     cv_result=cross_val_score(ensembles[key],X_train,Y_train,cv=kfold,scoring='neg_mean_squared_error')
+#     results.append(cv_result)
+#     print('%s:%f (%f)' % (key,cv_result.mean(),cv_result.std()))
+#
+# fig=pyplot.figure()
+# fig.suptitle('Boost')
+# ax=fig.add_subplot(111)
+# pyplot.boxplot(results)
+# ax.set_xticklabels(ensembles.keys())
+# pyplot.show()
 
 
 

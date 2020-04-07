@@ -27,7 +27,6 @@ from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.tree import ExtraTreeRegressor
 from sklearn.svm import SVR
 
 from sklearn.ensemble import BaggingRegressor
@@ -35,6 +34,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import AdaBoostRegressor
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.ensemble import VotingRegressor
+from sklearn.ensemble import ExtraTreesRegressor
 
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import RandomizedSearchCV
@@ -43,6 +43,8 @@ from pickle import dump
 from pickle import load
 from pandas import set_option
 from pandas.plotting import scatter_matrix
+from sklearn.metrics import mean_squared_error
+
 
 
 
@@ -143,7 +145,7 @@ results=[]
 # ensembles['ScaledAB-KNN']=Pipeline([('Scaler',StandardScaler()),('ABKNN',AdaBoostRegressor(base_estimator=KNeighborsRegressor(n_neighbors=3)))])
 # ensembles['ScaledAB-LR']=Pipeline([('Scaler',StandardScaler()),('ABLR',AdaBoostRegressor(LinearRegression()))])
 # ensembles['ScaledRFR']=Pipeline([('Scaler',StandardScaler()),('RFR',RandomForestRegressor())])
-# ensembles['ScaledETR']=Pipeline([('Scaler',StandardScaler()),('ETR',ExtraTreeRegressor())])
+# ensembles['ScaledETR']=Pipeline([('Scaler',StandardScaler()),('ETR',ExtraTreesRegressor())])
 # ensembles['ScaledGBR']=Pipeline([('Scaler',StandardScaler()),('GBR',GradientBoostingRegressor())])
 # for key in ensembles:
 #     kfold=KFold(n_splits=10,random_state=7,shuffle=True)
@@ -157,6 +159,43 @@ results=[]
 # pyplot.boxplot(results)
 # ax.set_xticklabels(ensembles.keys())
 # pyplot.show()
+
+#调参，集成算法随机梯度上升GBM:最优：-8.619565823771639 使用{'n_estimators': 600}
+# scaler=StandardScaler().fit(X_train)
+# rescaledX=scaler.transform(X_train)
+# para_grid={'n_estimators':[10,50,100,200,300,400,500,600,700,800,900]}
+# model=GradientBoostingRegressor()
+# kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+# grid=GridSearchCV(estimator=model,param_grid=para_grid, scoring='neg_mean_squared_error',cv=kfold)
+# grid_result=grid.fit(X=rescaledX,y=Y_train)
+# print('最优：%s 使用%s' % (grid_result.best_score_,grid_result.best_params_))
+
+#调参，集成算法极端随机树ET:最优：-10.422830918003564 使用{'n_estimators': 10}
+# scaler=StandardScaler().fit(X_train)
+# rescaledX=scaler.transform(X_train)
+# para_grid={'n_estimators':[5,10,20,30,40,50,60,70,80,90,100]}
+# model=ExtraTreesRegressor()
+# kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+# grid=GridSearchCV(estimator=model,param_grid=para_grid, scoring='neg_mean_squared_error',cv=kfold)
+# grid_result=grid.fit(X=rescaledX,y=Y_train)
+# print('最优：%s 使用%s' % (grid_result.best_score_,grid_result.best_params_))
+
+#最终选定GBM，n_estimators＝600
+scaler=StandardScaler().fit(X_train)
+rescaledX_train=scaler.transform(X_train)
+gbr=GradientBoostingRegressor(n_estimators=600)
+gbr.fit(X=rescaledX_train,y=Y_train)
+
+#验证
+rescaledX_test=scaler.transform(X_test)
+predict=gbr.predict(rescaledX_test)
+print(mean_squared_error(Y_test, predict))
+
+
+
+
+
+
 
 
 

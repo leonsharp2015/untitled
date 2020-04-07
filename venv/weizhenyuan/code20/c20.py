@@ -79,18 +79,72 @@ set_option('precision',2)
 # pyplot.show()
 
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.33,random_state=4)
-models={}
-models['LR']=LinearRegression()
-models['LASSO']=Lasso()
-models['EN']=ElasticNet()
-models['KNN']=KNeighborsRegressor()
-models['SVM']=SVR()
 results=[]
-for key in models:
-    kfold=KFold(n_splits=10,random_state=7,shuffle=True)
-    cv_result=cross_val_score(models[key],X_train,Y_train,cv=kfold,scoring='neg_mean_squared_error')
-    results.append(cv_result)
-    print('%s:%f (%f)' % (key,cv_result.mean(),cv_result.std()))
+# models={}
+# models['LR']=LinearRegression()
+# models['LASSO']=Lasso()
+# models['EN']=ElasticNet()
+# models['KNN']=KNeighborsRegressor()
+# models['SVM']=SVR()
+# for key in models:
+#     kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+#     cv_result=cross_val_score(models[key],X_train,Y_train,cv=kfold,scoring='neg_mean_squared_error')
+#     results.append(cv_result)
+#     print('%s:%f (%f)' % (key,cv_result.mean(),cv_result.std()))
+
+# fig=pyplot.figure()
+# fig.suptitle('Regression')
+# ax=fig.add_subplot(111)
+# pyplot.boxplot(results)
+# ax.set_xticklabels(models.keys())
+# pyplot.show()
+
+# pipelines={}
+# pipelines['ScalerLR']=Pipeline([('Scaler',StandardScaler()),('LR',LinearRegression())])
+# pipelines['ScalerLASSO']=Pipeline([('Scaler',StandardScaler()),('LASSO',Lasso())])
+# pipelines['ScalerEN']=Pipeline([('Scaler',StandardScaler()),('EN',ElasticNet())])
+# pipelines['ScalerKNN']=Pipeline([('Scaler',StandardScaler()),('KNN',KNeighborsRegressor())])
+# pipelines['ScalerCART']=Pipeline([('Scaler',StandardScaler()),('CART',DecisionTreeRegressor())])
+# pipelines['ScalerSVM']=Pipeline([('Scaler',StandardScaler()),('SVM',SVR())])
+#
+# for key in pipelines:
+#     kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+#     cv_result=cross_val_score(pipelines[key],X_train,Y_train,cv=kfold,scoring='neg_mean_squared_error')
+#     results.append(cv_result)
+#     print('%s:%f (%f)' % (key,cv_result.mean(),cv_result.std()))
+#
+# fig=pyplot.figure()
+# fig.suptitle('Regression')
+# ax=fig.add_subplot(111)
+# pyplot.boxplot(results)
+# ax.set_xticklabels(pipelines.keys())
+# pyplot.show()
+
+#调参数改变knn
+scaler=StandardScaler().fit(X_train)
+rescaledX=scaler.transform(X_train)
+para_grid={'n_neighbors':[1,3,5,7,9,11,13,15,17,19,21]}
+model=KNeighborsRegressor()
+kfold=KFold(n_splits=10,random_state=7,shuffle=True)
+grid=GridSearchCV(estimator=model,param_grid=para_grid, scoring='neg_mean_squared_error',cv=kfold)
+grid_result=grid.fit(X=rescaledX,y=Y_train)
+print('最优：%s 使用%s' % (grid_result.best_score_,grid_result.best_params_))
+cv_result=zip(grid_result.cv_results_['mean_test_score'],
+              grid_result.cv_results_['std_test_score'],
+              grid_result.cv_results_['params'])
+
+for mean,std,param in cv_result:
+    print('%f (%f) with %r' % (mean,std,param))
+
+
+
+
+
+
+
+
+
+
 
 
 

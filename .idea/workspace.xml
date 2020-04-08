@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/duanxiaoshou/code3/c3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +65,7 @@
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code15" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.c20">
+  <component name="RunManager" selected="Python.c3">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,28 +80,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="c15" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/weizhenyuan/code15" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/weizhenyuan/code15/c15.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,20 +176,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="c3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/duanxiaoshou/code3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code3/c3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.c15" />
       <item itemvalue="Python.c16" />
       <item itemvalue="Python.c17" />
       <item itemvalue="Python.c18" />
       <item itemvalue="Python.c20" />
+      <item itemvalue="Python.c3" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.c3" />
         <item itemvalue="Python.c20" />
         <item itemvalue="Python.c18" />
         <item itemvalue="Python.c17" />
         <item itemvalue="Python.c16" />
-        <item itemvalue="Python.c15" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586247161387</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="weizhenyuan">
+      <created>1586253512498</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586253512498</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,10 +354,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="452" y="143" width="704" height="589" key="#xdebugger.evaluate/0.23.1280.709@0.23.1280.709" timestamp="1580189693952" />
-    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586247161054">
+    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586253512191">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586247161054" />
+    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586253512191" />
     <state width="709" height="466" key="DebuggerActiveHint" timestamp="1580018384349">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -362,22 +370,22 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1586247155972">
+    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1586320409325">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586247155972" />
-    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1586247155972">
+    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586320409325" />
+    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1586320409324">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586247155972" />
-    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1586247155971">
+    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586320409324" />
+    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1586320409324">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586247155971" />
-    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1586247155972">
+    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586320409324" />
+    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1586320409325">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586247155972" />
+    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586320409325" />
     <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586136238224">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -402,10 +410,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="149" y="23" width="982" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1581665162811" />
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1586247162534">
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1586253514008">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586247162534" />
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586253514008" />
     <state x="303" y="31" width="673" height="693" key="find.popup" timestamp="1586231403781">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

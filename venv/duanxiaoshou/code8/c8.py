@@ -16,7 +16,7 @@ wine=load_wine()
 X=wine['data'][:,:2]
 y=wine['target']
 # clf=SVC(kernel='rbf',gamma=5,C=10)
-clf=MLPClassifier(solver='lbfgs')
+clf=MLPClassifier(solver='lbfgs',hidden_layer_sizes=[50,50],activation='tanh')
 clf.fit(X,y)
 
 #验证模型的区分空间

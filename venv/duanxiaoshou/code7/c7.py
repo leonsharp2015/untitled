@@ -46,29 +46,39 @@ xx=np.arange(xx.min(),xx.max(),0.02)
 yy=np.arange(yy.min(),yy.max(),0.02)
 xx,yy=np.meshgrid(xx,yy) #(253, 191),(253, 191)
 
-# plt.scatter(xx,yy,np.cos(xx*yy))#xx*yy表示每个元素相乘
-# plt.pcolormesh(xx,yy,np.cos(xx*yy))
 
-#指定默认字体
-mpl.rcParams['font.sans-serif'] = ['SimHei']
-mpl.rcParams['axes.unicode_minus'] = False
+#绘制1个svm：预测网格数据的值作为背景、网格数据的等高线、数据点
+# mpl.rcParams['font.sans-serif'] = ['SimHei'] #指定默认字体
+# mpl.rcParams['axes.unicode_minus'] = False
+# cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
+# cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
+#
+# clf=svm.SVC(kernel='rbf',gamma=0.7,C=C)
+# clf.fit(X,y)
+# Z=clf.predict(np.c_[xx.reshape(-1,1),yy.reshape(-1,1)])
+# ax=plt.gca()
+#
+# plt.pcolormesh(xx,yy,Z.reshape(xx.shape),cmap=cm_light)#使用xx和yy绘制Z背景,位置放在前面绘制
+# ax.contour(xx,yy,Z.reshape(xx.shape),alpha=0.8) #使用xx和yy绘制Z的等高线图
+# plt.scatter(X[:,0],X[:,1],c=y,s=50,cmap=cm_dark,marker='o',edgecolors='k') #edgecolors是指描绘点的边缘色彩，s指描绘点的大小，cmap指点的颜色
+# plt.show()
+
+#绘制4个svm
 cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
 cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
+for clf,title,ax in zip(models,titles,sub.flatten()):#压flatten为一个一维数组
+    clf.fit(X,y)
+    Z=clf.predict(np.c_[xx.reshape(-1,1),yy.reshape(-1,1)])
+    plt.pcolormesh(xx,yy,Z.reshape(xx.shape),cmap=cm_light)#使用xx和yy绘制Z背景,位置放在前面绘制
+    ax.contour(xx,yy,Z.reshape(xx.shape),alpha=0.8) #使用xx和yy绘制Z的等高线图
+    ax.scatter(X[:,0],X[:,1],c=y,s=50,cmap=cm_dark,marker='o',edgecolors='k') #edgecolors是指描绘点的边缘色彩，s指描绘点的大小，cmap指点的颜色
+    ax.set_xlim(xx.min(),xx.max())
+    ax.set_ylim(yy.min(),yy.max())
+    ax.set_xticks(())
+    ax.set_yticks(())
+    ax.set_title(title)
 
-clf=svm.SVC(kernel='rbf',gamma=0.7,C=C)
-clf.fit(X,y)
-Z=clf.predict(np.c_[xx.reshape(-1,1),yy.reshape(-1,1)])
-ax=plt.gca()
-
-plt.pcolormesh(xx,yy,Z.reshape(xx.shape),cmap=cm_light)#使用xx和yy绘制Z背景,位置放在前面绘制
-ax.contour(xx,yy,Z.reshape(xx.shape),alpha=0.8) #使用xx和yy绘制Z的等高线图
-plt.scatter(X[:,0],X[:,1],c=y,s=50,cmap=cm_dark,marker='o',edgecolors='k') #edgecolors是指描绘点的边缘色彩，s指描绘点的大小，cmap指点的颜色
 plt.show()
-
-
-
-
-
 
 
 

@@ -360,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586484567765</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="duanxiaoshou">
+      <created>1586486008403</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586486008403</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,10 +404,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="452" y="143" width="704" height="589" key="#xdebugger.evaluate/0.23.1280.709@0.23.1280.709" timestamp="1580189693952" />
-    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586484567501">
+    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586486008177">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586484567501" />
+    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586486008177" />
     <state width="709" height="466" key="DebuggerActiveHint" timestamp="1580018384349">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -413,22 +420,22 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1586485946615">
+    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1586488613247">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586485946615" />
-    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1586485946614">
+    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586488613247" />
+    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1586488613246">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586485946614" />
-    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1586485946614">
+    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586488613246" />
+    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1586488613245">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586485946614" />
-    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1586485946615">
+    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586488613245" />
+    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1586488613246">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586485946615" />
+    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586488613246" />
     <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586136238224">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

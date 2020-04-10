@@ -25,6 +25,7 @@ import matplotlib as mpl
 # ax.scatter(clf.support_vectors_[:,0],clf.support_vectors_[:,1],s=100,linewidths=1,facecolors='none')
 # plt.show()
 
+#svc用SVM分类
 wine=load_wine()
 X=wine['data'][:,:2]
 y=wine['target']
@@ -59,7 +60,7 @@ yy=np.arange(yy.min(),yy.max(),0.02)
 xx,yy=np.meshgrid(xx,yy) #(253, 191),(253, 191)
 
 
-#绘制1个svm：预测网格数据的值作为背景、网格数据的等高线、数据点
+#绘制1个svc：预测网格数据的值作为背景、网格数据的等高线、数据点
 # mpl.rcParams['font.sans-serif'] = ['SimHei'] #指定默认字体
 # mpl.rcParams['axes.unicode_minus'] = False
 # cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
@@ -75,7 +76,7 @@ xx,yy=np.meshgrid(xx,yy) #(253, 191),(253, 191)
 # plt.scatter(X[:,0],X[:,1],c=y,s=50,cmap=cm_dark,marker='o',edgecolors='k') #edgecolors是指描绘点的边缘色彩，s指描绘点的大小，cmap指点的颜色
 # plt.show()
 
-#绘制4个svm
+#绘制4个svc
 cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
 cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
 for clf,title,ax in zip(models,titles,sub.flatten()):#压flatten为一个一维数组

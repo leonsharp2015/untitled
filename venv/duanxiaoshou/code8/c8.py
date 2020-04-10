@@ -15,11 +15,13 @@ from sklearn.svm import SVC
 wine=load_wine()
 X=wine['data'][:,:2]
 y=wine['target']
-clf=SVC(kernel='rbf',gamma=5,C=10)
+# clf=SVC(kernel='rbf',gamma=5,C=10)
+clf=MLPClassifier(solver='lbfgs')
 clf.fit(X,y)
 
-xx=np.arange(X[:,0].min(),X[:,0].max(),0.1)
-yy=np.arange(X[:,1].min(),X[:,1].max(),0.1)
+#验证模型的区分空间
+xx=np.arange(X[:,0].min(),X[:,0].max(),0.02)
+yy=np.arange(X[:,1].min(),X[:,1].max(),0.02)
 xx,yy=np.meshgrid(xx,yy)
 X_grid=np.c_[xx.ravel(),yy.ravel()]
 y_grid=clf.predict(X_grid)

@@ -55,10 +55,13 @@ mpl.rcParams['axes.unicode_minus'] = False
 cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
 cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
 
-clf=svm.SVC(kernel='poly',degree=3,C=C)
+clf=svm.SVC(kernel='rbf',gamma=0.7,C=C)
 clf.fit(X,y)
 Z=clf.predict(np.c_[xx.reshape(-1,1),yy.reshape(-1,1)])
-plt.pcolormesh(xx,yy,Z.reshape(xx.shape),cmap=cm_light)#背景,位置放在前面绘制 #plt.scatter(xx,yy,Z)???
+ax=plt.gca()
+
+plt.pcolormesh(xx,yy,Z.reshape(xx.shape),cmap=cm_light)#使用xx和yy绘制Z背景,位置放在前面绘制
+ax.contour(xx,yy,Z.reshape(xx.shape),alpha=0.8) #使用xx和yy绘制Z的等高线图
 plt.scatter(X[:,0],X[:,1],c=y,s=50,cmap=cm_dark,marker='o',edgecolors='k') #edgecolors是指描绘点的边缘色彩，s指描绘点的大小，cmap指点的颜色
 plt.show()
 

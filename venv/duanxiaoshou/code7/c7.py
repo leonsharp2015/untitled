@@ -29,15 +29,27 @@ wine=load_wine()
 X=wine['data'][:,:2]
 y=wine['target']
 C=1.0
-models=(svm.SVC(kernel='linear',C=C),
-        svm.LinearSVC(C=C),
-        svm.SVC(kernel='rbf',gamma=0.7,C=C),
-        svm.SVC(kernel='poly',degree=3,C=C))
+# models=(svm.SVC(kernel='linear',C=C),
+#         svm.LinearSVC(C=C),
+#         svm.SVC(kernel='rbf',gamma=0.7,C=C),
+#         svm.SVC(kernel='poly',degree=3,C=C))
+# models=(clf.fit(X,y) for clf in models)
+# titles=('svc with linear kernal',
+#         'linearSVC (linear kernel)',
+#         'svc with rbf kernel',
+#         'svc with polynomialkernal')
+
+#径向基内核rbf
+models=(svm.SVC(kernel='rbf',gamma=0.1,C=C),
+        svm.SVC(kernel='rbf',gamma=1,C=C),
+        svm.SVC(kernel='rbf',gamma=5,C=C),
+        svm.SVC(kernel='rbf',gamma=10,C=C))
+
 models=(clf.fit(X,y) for clf in models)
-titles=('svc with linear kernal',
-        'linearSVC (linear kernel)',
-        'svc with rbf kernel',
-        'svc with polynomialkernal')
+titles=('svc with rbf kernel 0.1',
+        'svc with rbf kernel 1',
+        'svc with rbf kernel 5',
+        'svc with rbf kernel 10')
 
 fig,sub=plt.subplots(2,2)
 plt.subplots_adjust(wspace=0.4,hspace=0.4)

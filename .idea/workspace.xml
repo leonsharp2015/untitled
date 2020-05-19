@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/affinity_dataset.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/p1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/duanxiaoshou/code10/c10.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/duanxiaoshou/code10/c10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/weizhenyuan/code20" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Robert_layton/c1" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -58,14 +59,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/Robert_layton/c1" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code20" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code18" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code17" />
       <recent name="$PROJECT_DIR$/venv/weizhenyuan/code16" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code15" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.c10">
+  <component name="RunManager" selected="Python.p1">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,28 +103,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code10/c10.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="c7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/duanxiaoshou/code7" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code7/c7.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,20 +177,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="p1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c1/p1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.c7" />
       <item itemvalue="Python.c8" />
       <item itemvalue="Python.c9" />
       <item itemvalue="Python.c94" />
       <item itemvalue="Python.c10" />
+      <item itemvalue="Python.p1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.p1" />
         <item itemvalue="Python.c10" />
         <item itemvalue="Python.c94" />
         <item itemvalue="Python.c9" />
         <item itemvalue="Python.c8" />
-        <item itemvalue="Python.c7" />
       </list>
     </recent_temporary>
   </component>
@@ -416,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586657688593</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="duanxiaoshou">
+      <created>1586734689861</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586734689861</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,85 +449,61 @@
     <option name="LAST_COMMIT_MESSAGE" value="duanxiaoshou" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578153472703">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state x="104" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.709@0.23.1280.709" timestamp="1578153472703" />
     <state x="378" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586181077753">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="378" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.709@0.23.1280.709" timestamp="1586181077753" />
-    <state x="452" y="143" width="704" height="589" key="#xdebugger.evaluate" timestamp="1580189693952">
+    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586734689506">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="452" y="143" width="704" height="589" key="#xdebugger.evaluate/0.23.1280.709@0.23.1280.709" timestamp="1580189693952" />
-    <state x="271" y="23" key="CommitChangelistDialog2" timestamp="1586657688317">
+    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586734689506" />
+    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1589897990389">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586657688317" />
-    <state width="709" height="466" key="DebuggerActiveHint" timestamp="1580018384349">
+    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1589897990389" />
+    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1589897990388">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="709" height="466" key="DebuggerActiveHint/0.23.1280.709@0.23.1280.709" timestamp="1580018384349" />
-    <state x="100" y="123" width="1080" height="509" key="DiffContextDialog" timestamp="1580651317873">
+    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1589897990388" />
+    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1589897990387">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="100" y="123" width="1080" height="509" key="DiffContextDialog/0.23.1280.709@0.23.1280.709" timestamp="1580651317873" />
-    <state x="464" y="125" key="FileChooserDialogImpl" timestamp="1578732904010">
+    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1589897990387" />
+    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1589897990388">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="464" y="125" key="FileChooserDialogImpl/0.23.1280.709@0.23.1280.709" timestamp="1578732904010" />
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1586661785763">
+    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1589897990388" />
+    <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586832371434">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586661785763" />
-    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1586661785761">
+    <state width="1259" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586832371434" />
+    <state width="1259" height="232" key="GridCell.Tab.1.center" timestamp="1586832371434">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1586661785761" />
-    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1586661785761">
+    <state width="1259" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1586832371434" />
+    <state width="1259" height="232" key="GridCell.Tab.1.left" timestamp="1586832371433">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1586661785761" />
-    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1586661785762">
+    <state width="1259" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1586832371433" />
+    <state width="1259" height="232" key="GridCell.Tab.1.right" timestamp="1586832371434">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1586661785762" />
-    <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586492744983">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586492744983" />
-    <state width="1259" height="232" key="GridCell.Tab.1.center" timestamp="1586492744982">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1586492744982" />
-    <state width="1259" height="232" key="GridCell.Tab.1.left" timestamp="1586492744982">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1586492744982" />
-    <state width="1259" height="232" key="GridCell.Tab.1.right" timestamp="1586492744983">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1586492744983" />
-    <state x="434" y="95" key="RollbackChangesDialog" timestamp="1580352330230">
-      <screen x="0" y="23" width="1280" height="709" />
-    </state>
-    <state x="434" y="95" key="RollbackChangesDialog/0.23.1280.709@0.23.1280.709" timestamp="1580352330230" />
+    <state width="1259" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1586832371434" />
     <state x="149" y="23" width="982" height="709" key="SettingsEditor" timestamp="1581665162811">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="149" y="23" width="982" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1581665162811" />
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1586657690002">
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1586734691047">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586657690002" />
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586734691047" />
     <state x="303" y="31" width="673" height="693" key="find.popup" timestamp="1586231403781">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="303" y="31" width="673" height="693" key="find.popup/0.23.1280.709@0.23.1280.709" timestamp="1586231403781" />
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1580174814002">
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589894602612">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1580174814002" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1589894602612" />
   </component>
 </project>

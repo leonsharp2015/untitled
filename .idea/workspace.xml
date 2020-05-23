@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e98e29b3-3511-4bdd-aa24-08d90acc95c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/affinity_dataset.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/p1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/Python数据挖掘入门与实践.pdf.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/p2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/p3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c3/NBA_2014_games.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c3/leagues_NBA_2013_standings_expanded-standings.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c3/p1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c3/p32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c3/p33.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c4/cp4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c4/ratings.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c5/ad.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c5/ad.names" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c5/adult.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c5/adult.names" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c5/cp5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Robert_layton/c5/cp5_testwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Robert_layton/c1/p1.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Robert_layton/c1/p1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Robert_layton/c1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Robert_layton/c5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -59,14 +74,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/venv/Robert_layton/c5" />
+      <recent name="$PROJECT_DIR$/venv/Robert_layton" />
+      <recent name="$PROJECT_DIR$/venv/Robert_layton/c4" />
+      <recent name="$PROJECT_DIR$/venv/Robert_layton/c3" />
       <recent name="$PROJECT_DIR$/venv/Robert_layton/c1" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code20" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code18" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code17" />
-      <recent name="$PROJECT_DIR$/venv/weizhenyuan/code16" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.p1">
+  <component name="RunManager" selected="Python.cp4">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="c10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="c41" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,12 +112,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/duanxiaoshou/code10" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code10/c10.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c4/c41.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="c8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="cp4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,12 +134,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/duanxiaoshou/code8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code8/c8.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c4/cp4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,7 +148,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="c9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="p1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,12 +156,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/duanxiaoshou/code9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code9/c9.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c3/p1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,7 +170,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="c94" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="p32" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,12 +178,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/duanxiaoshou/code9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/duanxiaoshou/code9/c94.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c3/p32.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,7 +192,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="p1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="p33" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -185,12 +200,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/local/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Robert_layton/c3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c1/p1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Robert_layton/c3/p33.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -200,19 +215,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.c8" />
-      <item itemvalue="Python.c9" />
-      <item itemvalue="Python.c94" />
-      <item itemvalue="Python.c10" />
-      <item itemvalue="Python.p1" />
+      <item itemvalue="Python.p1 (1)" />
+      <item itemvalue="Python.p32" />
+      <item itemvalue="Python.p33" />
+      <item itemvalue="Python.c41" />
+      <item itemvalue="Python.cp4" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.p1" />
-        <item itemvalue="Python.c10" />
-        <item itemvalue="Python.c94" />
-        <item itemvalue="Python.c9" />
-        <item itemvalue="Python.c8" />
+        <item itemvalue="Python.cp4" />
+        <item itemvalue="Python.c41" />
+        <item itemvalue="Python.p33" />
+        <item itemvalue="Python.p32" />
+        <item itemvalue="Python.p1 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -457,38 +472,38 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="271" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1586734689506" />
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom" timestamp="1589897990389">
+    <state width="1259" height="203" key="GridCell.Tab.0.bottom" timestamp="1590232474503">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1589897990389" />
-    <state width="1259" height="246" key="GridCell.Tab.0.center" timestamp="1589897990388">
+    <state width="1259" height="203" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1590232474503" />
+    <state width="1259" height="203" key="GridCell.Tab.0.center" timestamp="1590232474502">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1589897990388" />
-    <state width="1259" height="246" key="GridCell.Tab.0.left" timestamp="1589897990387">
+    <state width="1259" height="203" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1590232474502" />
+    <state width="1259" height="203" key="GridCell.Tab.0.left" timestamp="1590232474501">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1589897990387" />
-    <state width="1259" height="246" key="GridCell.Tab.0.right" timestamp="1589897990388">
+    <state width="1259" height="203" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1590232474501" />
+    <state width="1259" height="203" key="GridCell.Tab.0.right" timestamp="1590232474503">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="246" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1589897990388" />
-    <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1586832371434">
+    <state width="1259" height="203" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1590232474503" />
+    <state width="1259" height="232" key="GridCell.Tab.1.bottom" timestamp="1589982250046">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1586832371434" />
-    <state width="1259" height="232" key="GridCell.Tab.1.center" timestamp="1586832371434">
+    <state width="1259" height="232" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1589982250046" />
+    <state width="1259" height="232" key="GridCell.Tab.1.center" timestamp="1589982250045">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1586832371434" />
-    <state width="1259" height="232" key="GridCell.Tab.1.left" timestamp="1586832371433">
+    <state width="1259" height="232" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1589982250045" />
+    <state width="1259" height="232" key="GridCell.Tab.1.left" timestamp="1589982250045">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1586832371433" />
-    <state width="1259" height="232" key="GridCell.Tab.1.right" timestamp="1586832371434">
+    <state width="1259" height="232" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1589982250045" />
+    <state width="1259" height="232" key="GridCell.Tab.1.right" timestamp="1589982250046">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1586832371434" />
+    <state width="1259" height="232" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1589982250046" />
     <state x="149" y="23" width="982" height="709" key="SettingsEditor" timestamp="1581665162811">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -497,13 +512,13 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1586734691047" />
-    <state x="303" y="31" width="673" height="693" key="find.popup" timestamp="1586231403781">
+    <state x="303" y="31" width="673" height="693" key="find.popup" timestamp="1589984956779">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="303" y="31" width="673" height="693" key="find.popup/0.23.1280.709@0.23.1280.709" timestamp="1586231403781" />
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589894602612">
+    <state x="303" y="31" width="673" height="693" key="find.popup/0.23.1280.709@0.23.1280.709" timestamp="1589984956779" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1589902433155">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1589894602612" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1589902433155" />
   </component>
 </project>

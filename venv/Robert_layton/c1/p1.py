@@ -1,5 +1,7 @@
 import numpy as np
 from collections import defaultdict
+from operator import itemgetter
+
 X=np.loadtxt('affinity_dataset.txt')
 n_samples, n_features = X.shape
 
@@ -24,7 +26,8 @@ confidence = defaultdict(float)
 for premise, conclusion in valid_rules.keys():
     confidence[(premise, conclusion)] = valid_rules[(premise, conclusion)] / num_occurences[premise]
 
-
+sorted_support=sorted(support.items(),key=itemgetter(1),reverse=True)
+print(sorted_support)
 
 
 
